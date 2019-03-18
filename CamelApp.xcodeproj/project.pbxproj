@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		6B0CCDC9221853A200B8072A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0CCDC8221853A200B8072A /* AppDelegate.swift */; };
-		6B0CCDCB221853A200B8072A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0CCDCA221853A200B8072A /* ViewController.swift */; };
+		6B0CCDCB221853A200B8072A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0CCDCA221853A200B8072A /* MainViewController.swift */; };
 		6B0CCDCE221853A200B8072A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B0CCDCC221853A200B8072A /* Main.storyboard */; };
 		6B0CCDD0221853A600B8072A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B0CCDCF221853A600B8072A /* Assets.xcassets */; };
 		6B0CCDD3221853A600B8072A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B0CCDD1221853A600B8072A /* LaunchScreen.storyboard */; };
+		6B0CCDDB2219901100B8072A /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0CCDDA2219901100B8072A /* Globals.swift */; };
+		6B0CCDDD221991E000B8072A /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0CCDDC221991E000B8072A /* UserDefaultsExtension.swift */; };
+		6B0CCDDF221A115F00B8072A /* UIToolBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0CCDDE221A115E00B8072A /* UIToolBarExtension.swift */; };
+		6B46AF5E2220B1D100A1B37D /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B46AF5D2220B1D100A1B37D /* NotificationManager.swift */; };
+		6B79CA53223710BA003AD8FA /* NotificationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B79CA52223710BA003AD8FA /* NotificationConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6B0CCDC5221853A200B8072A /* CamelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CamelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B0CCDC8221853A200B8072A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6B0CCDCA221853A200B8072A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6B0CCDCA221853A200B8072A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6B0CCDCD221853A200B8072A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6B0CCDCF221853A600B8072A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B0CCDD2221853A600B8072A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B0CCDD4221853A600B8072A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B0CCDDA2219901100B8072A /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		6B0CCDDC221991E000B8072A /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
+		6B0CCDDE221A115E00B8072A /* UIToolBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIToolBarExtension.swift; sourceTree = "<group>"; };
+		6B46AF5D2220B1D100A1B37D /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		6B79CA52223710BA003AD8FA /* NotificationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,27 @@
 		6B0CCDC7221853A200B8072A /* CamelApp */ = {
 			isa = PBXGroup;
 			children = (
+				6B0CCDE0221A181700B8072A /* Extensions */,
 				6B0CCDC8221853A200B8072A /* AppDelegate.swift */,
-				6B0CCDCA221853A200B8072A /* ViewController.swift */,
+				6B0CCDDA2219901100B8072A /* Globals.swift */,
+				6B0CCDCA221853A200B8072A /* MainViewController.swift */,
+				6B46AF5D2220B1D100A1B37D /* NotificationManager.swift */,
+				6B79CA52223710BA003AD8FA /* NotificationConstants.swift */,
 				6B0CCDCC221853A200B8072A /* Main.storyboard */,
 				6B0CCDCF221853A600B8072A /* Assets.xcassets */,
 				6B0CCDD1221853A600B8072A /* LaunchScreen.storyboard */,
 				6B0CCDD4221853A600B8072A /* Info.plist */,
 			);
 			path = CamelApp;
+			sourceTree = "<group>";
+		};
+		6B0CCDE0221A181700B8072A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6B0CCDDC221991E000B8072A /* UserDefaultsExtension.swift */,
+				6B0CCDDE221A115E00B8072A /* UIToolBarExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +158,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B0CCDCB221853A200B8072A /* ViewController.swift in Sources */,
+				6B46AF5E2220B1D100A1B37D /* NotificationManager.swift in Sources */,
+				6B0CCDCB221853A200B8072A /* MainViewController.swift in Sources */,
 				6B0CCDC9221853A200B8072A /* AppDelegate.swift in Sources */,
+				6B79CA53223710BA003AD8FA /* NotificationConstants.swift in Sources */,
+				6B0CCDDD221991E000B8072A /* UserDefaultsExtension.swift in Sources */,
+				6B0CCDDF221A115F00B8072A /* UIToolBarExtension.swift in Sources */,
+				6B0CCDDB2219901100B8072A /* Globals.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +313,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5TC86UV67D;
 				INFOPLIST_FILE = CamelApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +332,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5TC86UV67D;
 				INFOPLIST_FILE = CamelApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
