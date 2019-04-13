@@ -1,0 +1,33 @@
+
+/* Class = "UILabel"; text = "235"; ObjectID = "1qE-6b-26Q"; */
+"1qE-6b-26Q.text" = "235";
+
+/* Class = "UILabel"; text = "В период времени"; ObjectID = "CPc-IZ-17o"; */
+"CPc-IZ-17o.text" = "В период времени";
+
+/* Class = "UILabel"; text = "Не беспокоить"; ObjectID = "Fke-Rq-C6F"; */
+"Fke-Rq-C6F.text" = "Не беспокоить";
+
+/* Class = "UILabel"; text = "8"; ObjectID = "cFr-km-hSW"; */
+"cFr-km-hSW.text" = "8";
+
+/* Class = "UIButton"; normalTitle = "3:00 PM"; ObjectID = "cOD-8A-CaB"; */
+"cOD-8A-CaB.normalTitle" = "3:00 PM";
+
+/* Class = "UIButton"; normalTitle = "3:00 AM"; ObjectID = "jas-8y-E4H"; */
+"jas-8y-E4H.normalTitle" = "3:00 AM";
+
+/* Class = "UILabel"; text = "Раз(а) мы помогли вам выровнять спину"; ObjectID = "oAf-fd-cxJ"; Note = "Counter label"; */
+"oAf-fd-cxJ.text" = "Раз(а) мы помогли вам выровнять спину";
+
+/* Class = "UILabel"; text = "До"; ObjectID = "oPt-eq-P0o"; */
+"oPt-eq-P0o.text" = "До";
+
+/* Class = "UILabel"; text = "4"; ObjectID = "q2x-2r-fyg"; */
+"q2x-2r-fyg.text" = "4";
+
+/* Class = "UILabel"; text = "С"; ObjectID = "sCV-Mc-AX3"; */
+"sCV-Mc-AX3.text" = "С";
+
+/* Class = "UILabel"; text = "Кол-во Напоминаний"; ObjectID = "ysw-z1-JbH"; */
+"ysw-z1-JbH.text" = "Кол-во Напоминаний";

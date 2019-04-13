@@ -18,7 +18,7 @@ class NotificationManager {
     
     private init() {}
     
-    private let notificationCenter = UNUserNotificationCenter.current()
+    let notificationCenter = UNUserNotificationCenter.current()
     
     func showRequestAlert(with completion: @escaping () -> Void) {
         
@@ -47,7 +47,7 @@ class NotificationManager {
         
         content.title = "CamelApp"
         content.body  = notificationsString[Int(arc4random_uniform(31))]
-        content.sound = UNNotificationSound.default
+        content.sound = UNNotificationSound(named: UNNotificationSoundName(rawValue: "camel2.mp3"))
         content.badge = 1
 
         var dateComponents = DateComponents()
@@ -63,7 +63,7 @@ class NotificationManager {
         
         if first {
             hours = startHour
-            min = period * 60 / remindNotif
+            min = 0//period * 60 / remindNotif
         }
         
         
@@ -72,27 +72,33 @@ class NotificationManager {
                 print("Error \(error.localizedDescription)")
             } else {
                 let identifier = self.stringWithUUID()
-                if self.hours < endHour {
+                if self.hours != endHour  {
                     self.scheduleNotification(identifier: identifier,
                                                   period: period,
                                               remindNotif: remindNotif,
                                                startHour: self.hours,
                                                  endHour: endHour,
                                                  minutes: self.min)
+                    print("hour: \(self.hours)\nminutes: \(self.min) \nidentifier: \(identifier)")
                 } else {
                     return
                 }
+
+              
+                    if (self.min + period * 60 / remindNotif) < 60 {
+                        self.min =  self.min + period * 60 / remindNotif
+                    } else if (self.min + period * 60 / remindNotif) == 60 || remindNotif == 1 {
+                        self.hours += 1
+                        self.min = 0
+                    } else {
+                        self.hours += 1
+                        self.min = period * 60 / remindNotif
+                    }
                 
-                if self.min < 60 {
-                    self.min =  self.min + period * 60 / remindNotif
-                } else {
-                    self.hours += 1
-                    self.min = period * 60 / remindNotif
-                }
                 
-                
-                print("hour: \(self.hours)\nminutes: \(self.min) \nidentifier: \(identifier)")
-                
+
+
+
             }
             
         }
@@ -115,3 +121,5 @@ class NotificationManager {
     }
     
 }
+
+

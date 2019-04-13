@@ -27,6 +27,9 @@ struct Globals {
         static let plusMinusThemeKey = "PlusMinusButtonAppColor"
         static let countNotifLabel  = "CountNotifLabelAppColor"
         static let descNotifLabel   = "DescNotifLabelAppColor"
+        static let statusBarColor   = "StatusBarColor"
+        static let fromButtonTheme  = "FromButtonTheme"
+        static let toButtonTheme    = "ToButtonTheme"
         
     }
     
@@ -34,8 +37,9 @@ struct Globals {
         
         static let fromDate    = "NotificationFromDate"
         static let toDate      = "NotificationToDate"
-        static let remindNotif  = "NotificationsCount"
+        static let remindNotif = "NotificationsCount"
         static let periodNotif = "NotificationsPeriod"
+        static let notifCount  = "NotificationsLabelCount"
         
     }
     
