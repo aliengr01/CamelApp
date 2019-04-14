@@ -16,7 +16,7 @@ class MainViewController: UITableViewController {
     @IBOutlet weak var fromButton: UIButton! {
         didSet {
             let count = defaults.integer(forKey: Globals.NotificationsKey.fromDate) == 0 ? 10 : defaults.integer(forKey: Globals.NotificationsKey.fromDate)
-            fromButton.setTitle(String(count) + ":00 PM",
+            fromButton.setTitle(String(count) + ":00 AM",
                                 for: .normal)
         }
     }
@@ -24,7 +24,7 @@ class MainViewController: UITableViewController {
     @IBOutlet weak var toButton: UIButton! {
         didSet {
             let count = defaults.integer(forKey: Globals.NotificationsKey.toDate) == 0 ? 10 : (defaults.integer(forKey: Globals.NotificationsKey.toDate) - 12)
-            toButton.setTitle(String(count) + ":00 AM",
+            toButton.setTitle(String(count) + ":00 PM",
                                 for: .normal)
         }
     }
@@ -56,6 +56,8 @@ class MainViewController: UITableViewController {
     
     ////Views
     @IBOutlet var separateViews: [UIView]!
+    
+    private var saveButton: UIBarButtonItem!
     
     //MARK: - properties
     private let defaults = UserDefaults.standard //UserDefaults propertie
@@ -118,8 +120,10 @@ class MainViewController: UITableViewController {
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = UIColor.clear
         self.navigationController?.navigationBar.tintColor = Globals.Colors.orangeColor
-        let saveButton = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(addTapped))
-        saveButton.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20.0, weight: .bold)], for: .normal)
+        saveButton = UIBarButtonItem(title: NSLocalizedString("Save", comment: "Save") , style: .plain, target: self, action: #selector(addTapped))
+        saveButton.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20.0, weight: .bold),
+                                           NSAttributedString.Key.foregroundColor: defaults.colorForKey(key: Globals.AppThemeKey.saveButtonTheme) ?? Globals.Colors.orangeColor],
+                                          for: .normal)
         
         if show {
             navigationItem.rightBarButtonItem = saveButton
@@ -127,6 +131,10 @@ class MainViewController: UITableViewController {
             navigationItem.rightBarButtonItem = nil
         }
         
+//        navigationItem.rightBarButtonItem?.customView?.transform = CGAffineTransform(scaleX: 0, y: 0)
+//        UIView.animate(withDuration: 1.0, delay: 0.5, options: .curveLinear, animations: {
+//            self.navigationItem.rightBarButtonItem?.customView?.transform = CGAffineTransform.identity
+//        }, completion: nil)
     }
     
     @objc func addTapped() {
@@ -269,6 +277,7 @@ class MainViewController: UITableViewController {
         defaults.setColor(color: .black, forKey: Globals.AppThemeKey.toButtonTheme)
         defaults.set(false, forKey: Globals.AppThemeKey.plusMinusThemeKey)
         defaults.set(0, forKey: Globals.AppThemeKey.statusBarColor)
+        defaults.setColor(color: Globals.Colors.orangeColor, forKey: Globals.AppThemeKey.saveButtonTheme)
         
         setTheme()
         
@@ -285,6 +294,7 @@ class MainViewController: UITableViewController {
         defaults.setColor(color: .white, forKey: Globals.AppThemeKey.toButtonTheme)
         defaults.set(true, forKey: Globals.AppThemeKey.plusMinusThemeKey)
         defaults.set(1, forKey: Globals.AppThemeKey.statusBarColor)
+        defaults.setColor(color: .white, forKey: Globals.AppThemeKey.saveButtonTheme)
         
         setTheme()
         
@@ -301,6 +311,7 @@ class MainViewController: UITableViewController {
         defaults.setColor(color: .white, forKey: Globals.AppThemeKey.toButtonTheme)
         defaults.set(false, forKey: Globals.AppThemeKey.plusMinusThemeKey)
         defaults.set(1, forKey: Globals.AppThemeKey.statusBarColor)
+        defaults.setColor(color: Globals.Colors.orangeColor, forKey: Globals.AppThemeKey.saveButtonTheme)
         
         setTheme()
     }
@@ -370,8 +381,8 @@ extension MainViewController {
             self.descNotifLabel.textColor          = self.defaults.colorForKey(key: Globals.AppThemeKey.descNotifLabel) ?? .black
             self.periodCountLabel.textColor        = self.defaults.colorForKey(key: Globals.AppThemeKey.descNotifLabel) ?? .black
             self.remindesCountLabel.textColor      = self.defaults.colorForKey(key: Globals.AppThemeKey.descNotifLabel) ?? .black
-            self.fromButton.setTitleColor(self.defaults.colorForKey(key: Globals.AppThemeKey.fromButtonTheme) ?? .white, for: .normal)
-            self.toButton.setTitleColor(self.defaults.colorForKey(key: Globals.AppThemeKey.toButtonTheme), for: .normal)
+            self.fromButton.setTitleColor(self.defaults.colorForKey(key: Globals.AppThemeKey.fromButtonTheme) ?? .black, for: .normal)
+            self.toButton.setTitleColor(self.defaults.colorForKey(key: Globals.AppThemeKey.toButtonTheme) ?? .black, for: .normal)
         }
         
     }
@@ -505,7 +516,7 @@ extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         case 1:
             return "00"
         default:
-            return picker.tag == 0 ? "PM" : "AM"
+            return picker.tag == 0 ? "AM" : "PM"
         }
         
     }
@@ -514,12 +525,12 @@ extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         switch component {
         case 0:
             if fromButton.isSelected {
-                fromButton.setTitle(pickerArray[row] + ":00 PM", for: .normal)
+                fromButton.setTitle(pickerArray[row] + ":00 AM", for: .normal)
                 defaults.set(Int(pickerArray[row]), forKey: Globals.NotificationsKey.fromDate)
                 
             } else {
                 let timeInt = (Int(pickerArray[row]) ?? 0) + 12
-                toButton.setTitle(pickerArray[row] + ":00 AM", for: .normal)
+                toButton.setTitle(pickerArray[row] + ":00 PM", for: .normal)
                 defaults.set(timeInt, forKey: Globals.NotificationsKey.toDate)
             }
         default:
@@ -553,7 +564,7 @@ extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         case 1:
              label.text = "00"
         default:
-            label.text = picker.tag == 0 ? "PM" : "AM"
+            label.text = picker.tag == 0 ? "AM" : "PM"
         }
         
         return label

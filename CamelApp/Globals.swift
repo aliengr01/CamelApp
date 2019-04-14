@@ -30,6 +30,7 @@ struct Globals {
         static let statusBarColor   = "StatusBarColor"
         static let fromButtonTheme  = "FromButtonTheme"
         static let toButtonTheme    = "ToButtonTheme"
+        static let saveButtonTheme  = "SaveButtonTheme"
         
     }
     
