@@ -9,17 +9,13 @@
 import UIKit
 
 struct Globals {
-    
     struct Colors {
-        
         static let orangeColor = UIColor(red: 253/255, green: 148/255, blue: 38/255, alpha: 1.0)
         static let blackColor  = UIColor.black
         static let whiteColor  = UIColor.white
-        
     }
     
     struct AppThemeKey {
-        
         static let mainThemeKey     = "MainAppColor"
         static let labelsThemeKey   = "LabelsAppColor"
         static let buttonsThemeKey  = "ButtonsAppColor"
@@ -31,18 +27,13 @@ struct Globals {
         static let fromButtonTheme  = "FromButtonTheme"
         static let toButtonTheme    = "ToButtonTheme"
         static let saveButtonTheme  = "SaveButtonTheme"
-        
     }
     
     struct NotificationsKey {
-        
         static let fromDate    = "NotificationFromDate"
         static let toDate      = "NotificationToDate"
         static let remindNotif = "NotificationsCount"
         static let periodNotif = "NotificationsPeriod"
         static let notifCount  = "NotificationsLabelCount"
-        
     }
-    
-    
 }
