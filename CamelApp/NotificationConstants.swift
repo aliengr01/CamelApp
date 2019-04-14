@@ -5,11 +5,11 @@
 //  Created by Igor Ryazancev on 3/11/19.
 //  Copyright © 2019 Igor Ryazancev. All rights reserved.
 //
-
+import Foundation
 
 let notificationsString = [
-    "Эй, выровняй спину!",
-    "Ты снова горбатишься?",
+    NSLocalizedString("Hey, straighten your back!", comment: "Эй, выровняй спину!"),
+    NSLocalizedString("You are slouching again?", comment: "Ты снова горбатишься?"),
     "Выровняйся!",
     "Что-то мне подсказывает, что ты сейчас горбатишься!",
     "Надеюсь ты сейчас с ровной спиной ?",
