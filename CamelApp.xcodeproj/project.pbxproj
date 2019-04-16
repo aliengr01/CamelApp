@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5EE11DE022638FF700F7ED50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE11DE222638FF700F7ED50 /* Main.storyboard */; };
+		5EE11DE52263AAA700F7ED50 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EE11DE32263AAA700F7ED50 /* Localizable.strings */; };
 		6B0CCDC9221853A200B8072A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0CCDC8221853A200B8072A /* AppDelegate.swift */; };
 		6B0CCDCB221853A200B8072A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0CCDCA221853A200B8072A /* MainViewController.swift */; };
 		6B0CCDD0221853A600B8072A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B0CCDCF221853A600B8072A /* Assets.xcassets */; };
@@ -25,6 +26,10 @@
 		5EE11DDE22638EEA00F7ED50 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		5EE11DDF22638EF200F7ED50 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		5EE11DE122638FF700F7ED50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5EE11DE42263AAA700F7ED50 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5EE11DE62263AAA700F7ED50 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		5EE11DE72265214D00F7ED50 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5EE11DE82265214D00F7ED50 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Main.strings; sourceTree = "<group>"; };
 		6B0CCDC5221853A200B8072A /* CamelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CamelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B0CCDC8221853A200B8072A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B0CCDCA221853A200B8072A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +87,7 @@
 				6B0CCDCF221853A600B8072A /* Assets.xcassets */,
 				6B0CCDD1221853A600B8072A /* LaunchScreen.storyboard */,
 				6B0CCDD4221853A600B8072A /* Info.plist */,
+				5EE11DE32263AAA700F7ED50 /* Localizable.strings */,
 			);
 			path = CamelApp;
 			sourceTree = "<group>";
@@ -156,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B5182932247C9C100F570B1 /* Expand.m4a in Resources */,
+				5EE11DE52263AAA700F7ED50 /* Localizable.strings in Resources */,
 				5EE11DE022638FF700F7ED50 /* Main.storyboard in Resources */,
 				6B5182952247CBC700F570B1 /* camel2.mp3 in Resources */,
 				6B0CCDD3221853A600B8072A /* LaunchScreen.storyboard in Resources */,
@@ -187,8 +194,19 @@
 			isa = PBXVariantGroup;
 			children = (
 				5EE11DE122638FF700F7ED50 /* Base */,
+				5EE11DE62263AAA700F7ED50 /* ru */,
+				5EE11DE82265214D00F7ED50 /* uk */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5EE11DE32263AAA700F7ED50 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5EE11DE42263AAA700F7ED50 /* ru */,
+				5EE11DE72265214D00F7ED50 /* uk */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		6B0CCDD1221853A600B8072A /* LaunchScreen.storyboard */ = {
