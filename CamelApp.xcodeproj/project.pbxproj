@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5EE11DE022638FF700F7ED50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE11DE222638FF700F7ED50 /* Main.storyboard */; };
+		5EE11DE52263AAA700F7ED50 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EE11DE32263AAA700F7ED50 /* Localizable.strings */; };
 		6B0CCDC9221853A200B8072A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0CCDC8221853A200B8072A /* AppDelegate.swift */; };
 		6B0CCDCB221853A200B8072A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0CCDCA221853A200B8072A /* MainViewController.swift */; };
 		6B0CCDD0221853A600B8072A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B0CCDCF221853A600B8072A /* Assets.xcassets */; };
@@ -14,7 +16,6 @@
 		6B0CCDDB2219901100B8072A /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0CCDDA2219901100B8072A /* Globals.swift */; };
 		6B0CCDDD221991E000B8072A /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0CCDDC221991E000B8072A /* UserDefaultsExtension.swift */; };
 		6B0CCDDF221A115F00B8072A /* UIToolBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0CCDDE221A115E00B8072A /* UIToolBarExtension.swift */; };
-		6B0D68CD22635A5C008971B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B0D68CC22635A5C008971B2 /* Main.storyboard */; };
 		6B46AF5E2220B1D100A1B37D /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B46AF5D2220B1D100A1B37D /* NotificationManager.swift */; };
 		6B5182932247C9C100F570B1 /* Expand.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 6B5182922247C9C100F570B1 /* Expand.m4a */; };
 		6B5182952247CBC700F570B1 /* camel2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B5182942247CBC700F570B1 /* camel2.mp3 */; };
@@ -22,6 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5EE11DDE22638EEA00F7ED50 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		5EE11DDF22638EF200F7ED50 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		5EE11DE122638FF700F7ED50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5EE11DE42263AAA700F7ED50 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5EE11DE62263AAA700F7ED50 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		5EE11DE72265214D00F7ED50 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5EE11DE82265214D00F7ED50 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Main.strings; sourceTree = "<group>"; };
 		6B0CCDC5221853A200B8072A /* CamelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CamelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B0CCDC8221853A200B8072A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B0CCDCA221853A200B8072A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -31,7 +39,6 @@
 		6B0CCDDA2219901100B8072A /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		6B0CCDDC221991E000B8072A /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 		6B0CCDDE221A115E00B8072A /* UIToolBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIToolBarExtension.swift; sourceTree = "<group>"; };
-		6B0D68CC22635A5C008971B2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		6B46AF5D2220B1D100A1B37D /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		6B5182922247C9C100F570B1 /* Expand.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Expand.m4a; sourceTree = "<group>"; };
 		6B5182942247CBC700F570B1 /* camel2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = camel2.mp3; sourceTree = "<group>"; };
@@ -76,10 +83,11 @@
 				6B0CCDCA221853A200B8072A /* MainViewController.swift */,
 				6B46AF5D2220B1D100A1B37D /* NotificationManager.swift */,
 				6B79CA52223710BA003AD8FA /* NotificationConstants.swift */,
-				6B0D68CC22635A5C008971B2 /* Main.storyboard */,
+				5EE11DE222638FF700F7ED50 /* Main.storyboard */,
 				6B0CCDCF221853A600B8072A /* Assets.xcassets */,
 				6B0CCDD1221853A600B8072A /* LaunchScreen.storyboard */,
 				6B0CCDD4221853A600B8072A /* Info.plist */,
+				5EE11DE32263AAA700F7ED50 /* Localizable.strings */,
 			);
 			path = CamelApp;
 			sourceTree = "<group>";
@@ -133,7 +141,10 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				en,
 				Base,
+				ru,
+				uk,
 			);
 			mainGroup = 6B0CCDBC221853A200B8072A;
 			productRefGroup = 6B0CCDC6221853A200B8072A /* Products */;
@@ -151,7 +162,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B5182932247C9C100F570B1 /* Expand.m4a in Resources */,
-				6B0D68CD22635A5C008971B2 /* Main.storyboard in Resources */,
+				5EE11DE52263AAA700F7ED50 /* Localizable.strings in Resources */,
+				5EE11DE022638FF700F7ED50 /* Main.storyboard in Resources */,
 				6B5182952247CBC700F570B1 /* camel2.mp3 in Resources */,
 				6B0CCDD3221853A600B8072A /* LaunchScreen.storyboard in Resources */,
 				6B0CCDD0221853A600B8072A /* Assets.xcassets in Resources */,
@@ -178,10 +190,31 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		5EE11DE222638FF700F7ED50 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5EE11DE122638FF700F7ED50 /* Base */,
+				5EE11DE62263AAA700F7ED50 /* ru */,
+				5EE11DE82265214D00F7ED50 /* uk */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5EE11DE32263AAA700F7ED50 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5EE11DE42263AAA700F7ED50 /* ru */,
+				5EE11DE72265214D00F7ED50 /* uk */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		6B0CCDD1221853A600B8072A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				6B0CCDD2221853A600B8072A /* Base */,
+				5EE11DDE22638EEA00F7ED50 /* ru */,
+				5EE11DDF22638EF200F7ED50 /* uk */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -312,7 +345,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5TC86UV67D;
+				DEVELOPMENT_TEAM = VLTNY99F7H;
 				INFOPLIST_FILE = CamelApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -331,7 +364,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5TC86UV67D;
+				DEVELOPMENT_TEAM = VLTNY99F7H;
 				INFOPLIST_FILE = CamelApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
