@@ -46,7 +46,7 @@ class NotificationManager {
         let content = UNMutableNotificationContent() // Содержимое уведомления
         
         content.title = "CamelApp"
-        content.body  = notificationsString[Int(arc4random_uniform(31))]
+        content.body  = notificationsString[Int(arc4random_uniform(UInt32(notificationsString.count)))]
         content.sound = UNNotificationSound(named: UNNotificationSoundName(rawValue: "camel2.mp3"))
         content.badge = 1
 
