@@ -52,7 +52,7 @@
                                                             <color key="textColor" red="0.99215686274509807" green="0.58039215690000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of times we helped you to straighten your back" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oAf-fd-cxJ">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The number of times we helped you to straighten your back" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oAf-fd-cxJ">
                                                             <rect key="frame" x="0.0" y="47.999999999999986" width="250" height="48"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="250" id="3pj-pA-abI"/>
