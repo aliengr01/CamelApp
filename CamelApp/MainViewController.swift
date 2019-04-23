@@ -57,6 +57,21 @@ class MainViewController: UITableViewController {
     ////Views
     @IBOutlet var separateViews: [UIView]!
     
+    private let pickerYPosition: CGFloat = {
+        switch UIScreen.main.bounds.height {
+        case 568:
+            return 260.0
+        case 667:
+            return 180.0
+        case 736:
+            return 110.0
+        case 812:
+            return 80.0
+        default:
+            return 0
+        }
+    }()
+    
     private var saveButton: UIBarButtonItem!
     
     //MARK: - properties
@@ -111,7 +126,6 @@ class MainViewController: UITableViewController {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         countNotificationsLabel.text = String(defaults.integer(forKey: Globals.NotificationsKey.notifCount))
-       // setupNavigation()
     }
     
     func setupNavigation(_ show: Bool = false) {
@@ -130,11 +144,6 @@ class MainViewController: UITableViewController {
         } else {
             navigationItem.rightBarButtonItem = nil
         }
-        
-//        navigationItem.rightBarButtonItem?.customView?.transform = CGAffineTransform(scaleX: 0, y: 0)
-//        UIView.animate(withDuration: 1.0, delay: 0.5, options: .curveLinear, animations: {
-//            self.navigationItem.rightBarButtonItem?.customView?.transform = CGAffineTransform.identity
-//        }, completion: nil)
     }
     
     @objc func addTapped() {
@@ -315,45 +324,32 @@ class MainViewController: UITableViewController {
         
         setTheme()
     }
-    
-
-
-
 }
 
 //MARK: - Decorate functions
 extension MainViewController {
-    
     private func setColorButton(_ button: UIButton, _ color: UIColor) {
-        
         button.backgroundColor      = color
         button.layer.borderWidth    = 2.0
         button.layer.borderColor    = UIColor.lightGray.cgColor
         button.layer.cornerRadius   = button.frame.height/2
         button.layer.masksToBounds  = true
-        
     }
     
-    
     private func setBorderForButtons(_ button: UIButton) {
-        
         let borderColor = defaults.colorForKey(key: Globals.AppThemeKey.viewsThemeKey)?.cgColor ?? Globals.Colors.orangeColor.cgColor
         button.layer.borderColor = borderColor
         button.layer.borderWidth = 3.0
-        
     }
     
     private func setPlusMinusButtons(_ plusImage: String, _ minusImage: String) {
-        
         remindButtons[0].setImage(UIImage(named: minusImage),   for: .normal)
         remindButtons[1].setImage(UIImage(named: plusImage),    for: .normal)
         periodButtons[0].setImage(UIImage(named: minusImage),   for: .normal)
         periodButtons[1].setImage(UIImage(named: plusImage),    for: .normal)
-        
     }
     
     private func setTheme() {
-        
         UIView.animate(withDuration: 0.8) {
             ////main background color
             self.tableView.backgroundColor = self.defaults.colorForKey(key: Globals.AppThemeKey.mainThemeKey) ?? .white
@@ -391,15 +387,11 @@ extension MainViewController {
 
 //MARK: - Date labels and date picker setup functions
 extension MainViewController {
-    
     private func setDateButtonsState(_ button: UIButton) {
-        
         button.isSelected.toggle()
         if button.isSelected {
             button.backgroundColor = Globals.Colors.orangeColor
             button.setTitleColor(.black, for: .selected)
-            
-            //setDatePicker()
             createPickerView(with: button.tag)
             if button.tag == 0 {
                 picker.selectRow(defaults.integer(forKey: Globals.NotificationsKey.fromDate) - 1, inComponent: 0, animated: true)
@@ -410,42 +402,32 @@ extension MainViewController {
             button.backgroundColor = .clear
             dismissPicker()
         }
-        
     }
     
     private func setDefaultButtonState(_ button: UIButton) {
-        
         button.backgroundColor = .clear
         button.isSelected = false
         button.setTitleColor(self.defaults.colorForKey(key: Globals.AppThemeKey.descNotifLabel) ?? .black, for: .normal)
-        
     }
     
     private func animatePicker(_ show: Bool) {
-        
         let lastRow = self.tableView.numberOfRows(inSection: 0) - 1
-        
-        
         if show {
             self.tableView.scrollToRow(at: IndexPath(row: lastRow, section: 0), at: .bottom, animated: true)
         }
-        
-        
         UIView.animate(withDuration: 0.3, animations: {
             if !show {
                 self.tableView.scrollToRow(at: IndexPath(row: lastRow - 1, section: 0), at: .bottom, animated: false)
             }
-            self.stack.frame.origin.y = self.view.frame.maxY - (show ? self.stack.frame.height - 120 : 0)
+            self.stack.frame.origin.y = self.view.frame.maxY - (show ? self.stack.frame.height - 120 : 0) + self.pickerYPosition
         }) { (_) in
             if !show {
                 self.stack.removeFromSuperview()
             }
         }
-        
     }
     
     private func converteDate(date: Date, isDefaults: Bool = false) -> String {
-        
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .none
         dateFormatter.timeStyle = .short
@@ -458,21 +440,18 @@ extension MainViewController {
         let dateString = dateFormatter.string(from: date)
         
         return dateString
-        
     }
     
 }
 
 //MARK: - custon picker view
 extension MainViewController {
-    
     private func createPickerView(with tag: Int) {
-        
         picker.tag = tag
         picker.delegate = self
         picker.dataSource = self
         picker.tintColor = Globals.Colors.orangeColor
-        picker.backgroundColor = .white
+        picker.backgroundColor = UIColor.black
         picker.setValue(Globals.Colors.orangeColor, forKey: "textColor")
         
         let toolBar = UIToolbar().ToolbarPiker(mySelect: #selector(dismissPicker), self)
@@ -487,29 +466,24 @@ extension MainViewController {
         self.view.addSubview(stack)
         animatePicker(true)
     }
-    
 }
 
 //MARK: - custon picker view
 extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
-    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 3
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        
         switch component {
         case 0:
             return 12
         default:
             return 1
         }
-
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
         switch component {
         case 0:
             return pickerArray[row]
@@ -518,7 +492,6 @@ extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         default:
             return picker.tag == 0 ? "AM" : "PM"
         }
-        
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -539,13 +512,10 @@ extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
- 
         return setLabelForPicker(row, component)
-        
     }
     
     private func  setLabelForPicker(_ row: Int, _ component: Int) -> UILabel {
-        
         var label: UILabel
         
         if let v = view as? UILabel {
@@ -569,16 +539,11 @@ extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         
         return label
     }
-    
-    
 }
 
 //MARK: - UNUserNotificationCenterDelegate
 extension MainViewController: UNUserNotificationCenterDelegate {
-    
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        //let count = defaults.integer(forKey: Globals.NotificationsKey.notifCount) + 1
-        //defaults.set(count, forKey: Globals.NotificationsKey.notifCount)
         viewWillLayoutSubviews()
     }
     
@@ -587,7 +552,6 @@ extension MainViewController: UNUserNotificationCenterDelegate {
 extension UIViewController {
     func setStatusBarStyle(_ style: UIStatusBarStyle) {
         if let statusBar = UIApplication.shared.value(forKey: "statusBar") as? UIView {
-            //statusBar.backgroundColor = style == .lightContent ? UIColor.black : .white
             statusBar.setValue(style == .lightContent ? UIColor.white : .black, forKey: "foregroundColor")
         }
     }

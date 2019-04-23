@@ -17,6 +17,7 @@
 		6B0CCDDD221991E000B8072A /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0CCDDC221991E000B8072A /* UserDefaultsExtension.swift */; };
 		6B0CCDDF221A115F00B8072A /* UIToolBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0CCDDE221A115E00B8072A /* UIToolBarExtension.swift */; };
 		6B46AF5E2220B1D100A1B37D /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B46AF5D2220B1D100A1B37D /* NotificationManager.swift */; };
+		6B4ED1E2226F86D70075B91C /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4ED1E1226F86D70075B91C /* UIDeviceExtension.swift */; };
 		6B5182932247C9C100F570B1 /* Expand.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 6B5182922247C9C100F570B1 /* Expand.m4a */; };
 		6B5182952247CBC700F570B1 /* camel2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B5182942247CBC700F570B1 /* camel2.mp3 */; };
 		6B79CA53223710BA003AD8FA /* NotificationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B79CA52223710BA003AD8FA /* NotificationConstants.swift */; };
@@ -40,6 +41,7 @@
 		6B0CCDDC221991E000B8072A /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 		6B0CCDDE221A115E00B8072A /* UIToolBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIToolBarExtension.swift; sourceTree = "<group>"; };
 		6B46AF5D2220B1D100A1B37D /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		6B4ED1E1226F86D70075B91C /* UIDeviceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
 		6B5182922247C9C100F570B1 /* Expand.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Expand.m4a; sourceTree = "<group>"; };
 		6B5182942247CBC700F570B1 /* camel2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = camel2.mp3; sourceTree = "<group>"; };
 		6B79CA52223710BA003AD8FA /* NotificationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationConstants.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			children = (
 				6B0CCDDC221991E000B8072A /* UserDefaultsExtension.swift */,
 				6B0CCDDE221A115E00B8072A /* UIToolBarExtension.swift */,
+				6B4ED1E1226F86D70075B91C /* UIDeviceExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				6B0CCDC9221853A200B8072A /* AppDelegate.swift in Sources */,
 				6B79CA53223710BA003AD8FA /* NotificationConstants.swift in Sources */,
 				6B0CCDDD221991E000B8072A /* UserDefaultsExtension.swift in Sources */,
+				6B4ED1E2226F86D70075B91C /* UIDeviceExtension.swift in Sources */,
 				6B0CCDDF221A115F00B8072A /* UIToolBarExtension.swift in Sources */,
 				6B0CCDDB2219901100B8072A /* Globals.swift in Sources */,
 			);
