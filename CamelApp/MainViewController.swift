@@ -16,15 +16,15 @@ class MainViewController: UITableViewController {
     @IBOutlet weak var fromButton: UIButton! {
         didSet {
             let count = defaults.integer(forKey: Globals.NotificationsKey.fromDate) == 0 ? 10 : defaults.integer(forKey: Globals.NotificationsKey.fromDate)
-            fromButton.setTitle(String(count) + ":00 AM",
+            fromButton.setTitle(String(count) + ":00",
                                 for: .normal)
         }
     }
     
     @IBOutlet weak var toButton: UIButton! {
         didSet {
-            let count = defaults.integer(forKey: Globals.NotificationsKey.toDate) == 0 ? 10 : (defaults.integer(forKey: Globals.NotificationsKey.toDate) - 12)
-            toButton.setTitle(String(count) + ":00 PM",
+            let count = defaults.integer(forKey: Globals.NotificationsKey.toDate) == 0 ? 22 : (defaults.integer(forKey: Globals.NotificationsKey.toDate))
+            toButton.setTitle(String(count) + ":00",
                                 for: .normal)
         }
     }
@@ -57,6 +57,13 @@ class MainViewController: UITableViewController {
     ////Views
     @IBOutlet var separateViews: [UIView]!
     
+    @IBOutlet weak var counterCell: UITableViewCell!
+    @IBOutlet weak var amountCell: UITableViewCell!
+    @IBOutlet weak var numberHoursCell: UITableViewCell!
+    @IBOutlet weak var notificationsCell: UITableViewCell!
+    @IBOutlet weak var themeCell: UITableViewCell!
+    @IBOutlet weak var counterStack: UIStackView!
+    
     private let pickerYPosition: CGFloat = {
         switch UIScreen.main.bounds.height {
         case 568:
@@ -72,6 +79,7 @@ class MainViewController: UITableViewController {
         }
     }()
     
+   
     private var saveButton: UIBarButtonItem!
     
     //MARK: - properties
@@ -79,7 +87,8 @@ class MainViewController: UITableViewController {
     lazy var stack = UIStackView() //stack for date picker and toolbar, function: "setDatePicker()"
     
     ////picker view components
-    var pickerArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
+    let pickerArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
+    let pickerArrayMore = ["13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"]
     var picker = UIPickerView()
     
     //MARK: - Override functions
@@ -107,7 +116,13 @@ class MainViewController: UITableViewController {
         }
         
         setupNavigation()
-        
+
+        let vc = TutorialManager()
+        vc.changePosition(minYPosition: counterStack.frame.origin.y + 30, maxYPosition: counterCell.frame.height - 20, explainYPosition: counterStack.frame.origin.y + 10, explainText: "Эта штука делает тебя счастливее ахахаха")
+        vc.delegate = self
+        vc.modalPresentationStyle = .overCurrentContext
+        present(vc, animated: false, completion: nil)
+ 
     }
 
     
@@ -471,7 +486,7 @@ extension MainViewController {
 //MARK: - custon picker view
 extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 3
+        return 2
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -483,27 +498,22 @@ extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         }
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        switch component {
-        case 0:
-            return pickerArray[row]
-        case 1:
-            return "00"
-        default:
-            return picker.tag == 0 ? "AM" : "PM"
-        }
-    }
-    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch component {
         case 0:
             if fromButton.isSelected {
-                fromButton.setTitle(pickerArray[row] + ":00 AM", for: .normal)
+                var timeString = ""
+                if (Int(pickerArray[row]) ?? 0) < 10 {
+                    timeString = "0" + pickerArray[row] + ":00"
+                } else {
+                    timeString = pickerArray[row] + ":00"
+                }
+                fromButton.setTitle(timeString, for: .normal)
                 defaults.set(Int(pickerArray[row]), forKey: Globals.NotificationsKey.fromDate)
                 
             } else {
                 let timeInt = (Int(pickerArray[row]) ?? 0) + 12
-                toButton.setTitle(pickerArray[row] + ":00 PM", for: .normal)
+                toButton.setTitle(pickerArrayMore[row] + ":00", for: .normal)
                 defaults.set(timeInt, forKey: Globals.NotificationsKey.toDate)
             }
         default:
@@ -530,11 +540,11 @@ extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         
         switch component {
         case 0:
-            label.text = pickerArray[row]
+            label.text = picker.tag == 0 ? pickerArray[row] : pickerArrayMore[row]
         case 1:
              label.text = "00"
         default:
-            label.text = picker.tag == 0 ? "AM" : "PM"
+            label.text = ""
         }
         
         return label
@@ -553,6 +563,32 @@ extension UIViewController {
     func setStatusBarStyle(_ style: UIStatusBarStyle) {
         if let statusBar = UIApplication.shared.value(forKey: "statusBar") as? UIView {
             statusBar.setValue(style == .lightContent ? UIColor.white : .black, forKey: "foregroundColor")
+        }
+    }
+}
+
+//MARK: - TutorialManagerDelegate
+extension MainViewController: TutorialManagerDelegate {
+    func tutorialManagerDidTappedNextButton(_ viewController: TutorialManager, with counter: Int) {
+        switch counter {
+        case 1:
+            UIView.animate(withDuration: 0.5) {
+                self.tableView.scrollToRow(at: IndexPath(item: 1, section: 0), at: .middle, animated: false)
+                let minY = UIScreen.main.bounds.midY - 25
+                let maxY = (UIScreen.main.bounds.midY - 25) + (self.amountCell.frame.height + self.numberHoursCell.frame.height)
+                viewController.changePosition(minYPosition: minY, maxYPosition: maxY, explainYPosition: UIScreen.main.bounds.midY - 40, explainText: "jfdslkfndfnsdknfgdlknfdkjngfkdjbfg,dmbg nkj gnn gbn gbfk gnfkjgfskgfskjg ")
+            }
+        case 2:
+            UIView.animate(withDuration: 0.5) {
+                self.tableView.scrollToRow(at: IndexPath(item: 3, section: 0), at: .middle, animated: false)
+                let minY = UIScreen.main.bounds.midY - 40
+                let maxY = (UIScreen.main.bounds.midY - 45) + self.notificationsCell.frame.height
+                viewController.changePosition(minYPosition: minY, maxYPosition: maxY, explainYPosition: UIScreen.main.bounds.midY - 60, explainText: "fsjdfhdskjfndsjkg h gf gf gfg kfdgkjfdhgjkfhgjfdjkghfd ")
+            }
+        case 3:
+            viewController.dismiss(animated: false, completion: nil)
+        default:
+            break
         }
     }
 }
