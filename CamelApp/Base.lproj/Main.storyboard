@@ -319,13 +319,19 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="yia-2i-Xgb"/>
                     <connections>
+                        <outlet property="amountCell" destination="3m0-Oe-oIL" id="nYt-ke-eKi"/>
                         <outlet property="blackColorButton" destination="Mnl-Ls-0NJ" id="YbB-2k-ymf"/>
                         <outlet property="countNotificationsLabel" destination="1qE-6b-26Q" id="DKt-K9-eZ1"/>
+                        <outlet property="counterCell" destination="vOE-qR-uyJ" id="0PY-7U-HdP"/>
+                        <outlet property="counterStack" destination="kX6-PK-vTx" id="PAP-tw-GMO"/>
                         <outlet property="descNotifLabel" destination="oAf-fd-cxJ" id="UVc-3x-ds7"/>
                         <outlet property="fromButton" destination="jas-8y-E4H" id="eJU-ZT-gB4"/>
+                        <outlet property="notificationsCell" destination="myw-Sl-f9g" id="xkt-6d-x90"/>
+                        <outlet property="numberHoursCell" destination="Ipt-ig-yNQ" id="vVV-pz-aFV"/>
                         <outlet property="orangeColorButton" destination="9jH-Pn-ZOi" id="NtO-Zt-v1y"/>
                         <outlet property="periodCountLabel" destination="q2x-2r-fyg" id="n9b-rU-6FH"/>
                         <outlet property="remindesCountLabel" destination="cFr-km-hSW" id="KVu-1h-mD1"/>
+                        <outlet property="themeCell" destination="3ep-9H-dvF" id="Mj2-3f-65e"/>
                         <outlet property="toButton" destination="cOD-8A-CaB" id="YXp-dc-hoc"/>
                         <outlet property="whiteColorButton" destination="qDZ-HF-0Nm" id="AfB-LX-uTd"/>
                         <outletCollection property="explainingLabels" destination="ysw-z1-JbH" collectionClass="NSMutableArray" id="hU1-xj-5u3"/>
