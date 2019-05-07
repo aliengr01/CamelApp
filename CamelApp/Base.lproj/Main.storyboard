@@ -130,64 +130,8 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="103" id="Ipt-ig-yNQ">
-                                        <rect key="frame" x="0.0" y="430" width="375" height="103"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ipt-ig-yNQ" id="FEK-E6-Qdr">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="103"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Number of hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPc-IZ-17o">
-                                                    <rect key="frame" x="16" y="12" width="157.66666666666666" height="24"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <attributedString key="userComments">
-                                                        <fragment content="В период времени"/>
-                                                    </attributedString>
-                                                </label>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nld-pg-Eyx">
-                                                    <rect key="frame" x="16" y="44" width="343" height="4"/>
-                                                    <color key="backgroundColor" red="0.99215686274509807" green="0.58039215690000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="4" id="wG0-2z-7bc"/>
-                                                    </constraints>
-                                                </view>
-                                                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SAQ-3w-rip">
-                                                    <rect key="frame" x="124" y="57" width="127.33333333333331" height="43"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWy-hi-KGM">
-                                                            <rect key="frame" x="0.0" y="5" width="32" height="33"/>
-                                                            <state key="normal" image="minusButton"/>
-                                                        </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2x-2r-fyg">
-                                                            <rect key="frame" x="52" y="0.0" width="23.333333333333329" height="43"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFh-9F-hry">
-                                                            <rect key="frame" x="95.333333333333343" y="5" width="32" height="33"/>
-                                                            <state key="normal" image="plusButton"/>
-                                                        </button>
-                                                    </subviews>
-                                                </stackView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="CPc-IZ-17o" firstAttribute="top" secondItem="FEK-E6-Qdr" secondAttribute="topMargin" id="IiO-ey-fIE"/>
-                                                <constraint firstItem="Nld-pg-Eyx" firstAttribute="top" secondItem="CPc-IZ-17o" secondAttribute="bottom" constant="2" id="R4y-fT-ysU"/>
-                                                <constraint firstItem="SAQ-3w-rip" firstAttribute="top" secondItem="Nld-pg-Eyx" secondAttribute="bottom" constant="9" id="T2j-x2-l5Q"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CPc-IZ-17o" secondAttribute="trailing" constant="20" symbolic="YES" id="gZV-91-Sgr"/>
-                                                <constraint firstItem="Nld-pg-Eyx" firstAttribute="trailing" secondItem="FEK-E6-Qdr" secondAttribute="trailingMargin" id="gcm-i8-dri"/>
-                                                <constraint firstItem="CPc-IZ-17o" firstAttribute="leading" secondItem="FEK-E6-Qdr" secondAttribute="leadingMargin" id="lHe-J7-ezh"/>
-                                                <constraint firstItem="Nld-pg-Eyx" firstAttribute="leading" secondItem="FEK-E6-Qdr" secondAttribute="leadingMargin" id="vHe-og-TPM"/>
-                                                <constraint firstItem="SAQ-3w-rip" firstAttribute="centerX" secondItem="FEK-E6-Qdr" secondAttribute="centerX" id="yDs-0M-xO7"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="147" id="myw-Sl-f9g">
-                                        <rect key="frame" x="0.0" y="533" width="375" height="147"/>
+                                        <rect key="frame" x="0.0" y="430" width="375" height="147"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="myw-Sl-f9g" id="nEF-cM-amk">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="147"/>
@@ -270,7 +214,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="266" id="3ep-9H-dvF">
-                                        <rect key="frame" x="0.0" y="680" width="375" height="266"/>
+                                        <rect key="frame" x="0.0" y="577" width="375" height="266"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3ep-9H-dvF" id="SPi-CU-DqL">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="266"/>
@@ -305,6 +249,62 @@
                                                 <constraint firstItem="Mnl-Ls-0NJ" firstAttribute="leading" secondItem="9jH-Pn-ZOi" secondAttribute="trailing" constant="10" id="mzR-1i-aCa"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="qDZ-HF-0Nm" secondAttribute="bottom" constant="50" id="sHI-YC-p9j"/>
                                                 <constraint firstItem="9jH-Pn-ZOi" firstAttribute="leading" secondItem="qDZ-HF-0Nm" secondAttribute="trailing" constant="10" id="waa-HV-yYP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                    <tableViewCell hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="103" id="Ipt-ig-yNQ">
+                                        <rect key="frame" x="0.0" y="843" width="375" height="103"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ipt-ig-yNQ" id="FEK-E6-Qdr">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="102.66666666666667"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Number of hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPc-IZ-17o">
+                                                    <rect key="frame" x="16" y="12" width="157.66666666666666" height="24"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <attributedString key="userComments">
+                                                        <fragment content="В период времени"/>
+                                                    </attributedString>
+                                                </label>
+                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nld-pg-Eyx">
+                                                    <rect key="frame" x="16" y="44" width="343" height="4"/>
+                                                    <color key="backgroundColor" red="0.99215686274509807" green="0.58039215690000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="4" id="wG0-2z-7bc"/>
+                                                    </constraints>
+                                                </view>
+                                                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SAQ-3w-rip">
+                                                    <rect key="frame" x="124" y="57" width="127.33333333333331" height="43"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWy-hi-KGM">
+                                                            <rect key="frame" x="0.0" y="5" width="32" height="33"/>
+                                                            <state key="normal" image="minusButton"/>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2x-2r-fyg">
+                                                            <rect key="frame" x="52" y="0.0" width="23.333333333333329" height="43"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFh-9F-hry">
+                                                            <rect key="frame" x="95.333333333333343" y="5" width="32" height="33"/>
+                                                            <state key="normal" image="plusButton"/>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="CPc-IZ-17o" firstAttribute="top" secondItem="FEK-E6-Qdr" secondAttribute="topMargin" id="IiO-ey-fIE"/>
+                                                <constraint firstItem="Nld-pg-Eyx" firstAttribute="top" secondItem="CPc-IZ-17o" secondAttribute="bottom" constant="2" id="R4y-fT-ysU"/>
+                                                <constraint firstItem="SAQ-3w-rip" firstAttribute="top" secondItem="Nld-pg-Eyx" secondAttribute="bottom" constant="9" id="T2j-x2-l5Q"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CPc-IZ-17o" secondAttribute="trailing" constant="20" symbolic="YES" id="gZV-91-Sgr"/>
+                                                <constraint firstItem="Nld-pg-Eyx" firstAttribute="trailing" secondItem="FEK-E6-Qdr" secondAttribute="trailingMargin" id="gcm-i8-dri"/>
+                                                <constraint firstItem="CPc-IZ-17o" firstAttribute="leading" secondItem="FEK-E6-Qdr" secondAttribute="leadingMargin" id="lHe-J7-ezh"/>
+                                                <constraint firstItem="Nld-pg-Eyx" firstAttribute="leading" secondItem="FEK-E6-Qdr" secondAttribute="leadingMargin" id="vHe-og-TPM"/>
+                                                <constraint firstItem="SAQ-3w-rip" firstAttribute="centerX" secondItem="FEK-E6-Qdr" secondAttribute="centerX" id="yDs-0M-xO7"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
