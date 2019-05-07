@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FacebookCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -43,26 +44,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        AppEventsLogger.activate(application)
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-    //MARK: - Notifications
-    private func setNotifications() {
-        NotificationManager.shared.removeAllNotifications()
-        
-        NotificationManager.shared.showRequestAlert(with: { [weak self] in
-            NotificationManager.shared.scheduleNotification(identifier: "indentifier0",
-                                                            period: self?.defaults.integer(forKey: Globals.NotificationsKey.periodNotif) ?? 1,
-                                                            remindNotif: self?.defaults.integer(forKey: Globals.NotificationsKey.remindNotif) ?? 1,
-                                                            startHour: self?.defaults.integer(forKey: Globals.NotificationsKey.fromDate) ?? 10,
-                                                            endHour: self?.defaults.integer(forKey: Globals.NotificationsKey.toDate) ?? 22,
-                                                            minutes: 0,
-                                                            first: true)
-        })
-    }
-
 }
 

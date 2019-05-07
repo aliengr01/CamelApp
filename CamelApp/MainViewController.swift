@@ -179,7 +179,7 @@ class MainViewController: UITableViewController {
         queue.addOperation {
             NotificationManager.shared.showRequestAlert(with: { [weak self] in
                 NotificationManager.shared.scheduleNotification(identifier: "indentifier0",
-                                                                period: self?.defaults.integer(forKey: Globals.NotificationsKey.periodNotif) ?? 1,
+                                                                period: 1,
                                                                 remindNotif: self?.defaults.integer(forKey: Globals.NotificationsKey.remindNotif) ?? 6,
                                                                 startHour: self?.defaults.integer(forKey: Globals.NotificationsKey.fromDate) ?? 10,
                                                                 endHour: self?.defaults.integer(forKey: Globals.NotificationsKey.toDate) ?? 22,
@@ -575,17 +575,32 @@ extension MainViewController: TutorialManagerDelegate {
             UIView.animate(withDuration: 0.5) {
                 self.tableView.scrollToRow(at: IndexPath(item: 1, section: 0), at: .middle, animated: false)
                 let minY = UIScreen.main.bounds.midY - 25
-                let maxY = (UIScreen.main.bounds.midY - 25) + (self.amountCell.frame.height + self.numberHoursCell.frame.height)
-                viewController.changePosition(minYPosition: minY, maxYPosition: maxY, explainYPosition: UIScreen.main.bounds.midY - 40, explainText: "jfdslkfndfnsdknfgdlknfdkjngfkdjbfg,dmbg nkj gnn gbn gbfk gnfkjgfskgfskjg ")
+                let maxY = (UIScreen.main.bounds.midY - 25) + (self.amountCell.frame.height)
+                viewController.changePosition(minYPosition: minY, maxYPosition: maxY, explainYPosition: UIScreen.main.bounds.midY - 40, explainText: "jfdslkfndfnsdknfgdlknfdkjngfkdjbfg,dmbg nkj gnn gbn gbfk gnfkjgfskgfskjg")
             }
         case 2:
             UIView.animate(withDuration: 0.5) {
-                self.tableView.scrollToRow(at: IndexPath(item: 3, section: 0), at: .middle, animated: false)
+                self.tableView.scrollToRow(at: IndexPath(item: 2, section: 0), at: .middle, animated: false)
                 let minY = UIScreen.main.bounds.midY - 40
                 let maxY = (UIScreen.main.bounds.midY - 45) + self.notificationsCell.frame.height
                 viewController.changePosition(minYPosition: minY, maxYPosition: maxY, explainYPosition: UIScreen.main.bounds.midY - 60, explainText: "fsjdfhdskjfndsjkg h gf gf gfg kfdgkjfdhgjkfhgjfdjkghfd ")
             }
         case 3:
+            UIView.animate(withDuration: 0.5) {
+                self.tableView.scrollToRow(at: IndexPath(item: 3, section: 0), at: .middle, animated: false)
+                let minY = UIScreen.main.bounds.midY - 40
+                let maxY = (UIScreen.main.bounds.midY - 90) + self.themeCell.frame.height
+                viewController.changePosition(minYPosition: minY, maxYPosition: maxY, explainYPosition: UIScreen.main.bounds.midY - 60, explainText: "fsjdfhdskjfndsjkg h gf gf gfg kfdgkjfdhgjkfhgjfdjkghfd ")
+            }
+        case 4:
+            changedValues()
+            UIView.animate(withDuration: 0.5) {
+                self.tableView.scrollToRow(at: IndexPath(item: 0, section: 0), at: .bottom, animated: false)
+                let minY = 20
+                let maxY = 60
+                viewController.changePosition(minYPosition: CGFloat(minY), maxYPosition: CGFloat(maxY), explainYPosition: UIScreen.main.bounds.midY - 60, explainText: "fsjdfhdskjfndsjkg h gf gf gfg kfdgkjfdhgjkfhgjfdjkghfd ")
+            }
+        case 5:
             viewController.dismiss(animated: false, completion: nil)
         default:
             break
