@@ -590,7 +590,7 @@ extension MainViewController: TutorialManagerDelegate {
                 self.tableView.scrollToRow(at: IndexPath(item: 3, section: 0), at: .middle, animated: false)
                 let minY = self.themeCell.frame.origin.y - self.themeCell.frame.height/2
                 let maxY = self.themeCell.frame.origin.y + self.themeCell.frame.height/2
-                viewController.changePosition(minYPosition: minY, maxYPosition: maxY, explainYPosition: UIScreen.main.bounds.midY - 60, explainText: "fsjdfhdskjfndsjkg h gf gf gfg kfdgkjfdhgjkfhgjfdjkghfd ")
+                viewController.changePosition(minYPosition: minY, maxYPosition: maxY, explainYPosition: UIScreen.main.bounds.midY - 60, explainText:NSLocalizedString("Personalise the color of the interface", comment: "Выберите цветовую схему приложение"))
             }
         case 4:
             changedValues()
@@ -598,7 +598,7 @@ extension MainViewController: TutorialManagerDelegate {
                 self.tableView.scrollToRow(at: IndexPath(item: 0, section: 0), at: .bottom, animated: false)
                 let minY = UIApplication.shared.statusBarFrame.height
                 let maxY = (self.navigationController?.navigationBar.frame.height ?? 0) + minY
-                viewController.changePosition(minYPosition: CGFloat(minY), maxYPosition: CGFloat(maxY), explainYPosition: UIScreen.main.bounds.midY - 60, explainText: "fsjdfhdskjfndsjkg h gf gf gfg kfdgkjfdhgjkfhgjfdjkghfd ")
+                viewController.changePosition(minYPosition: CGFloat(minY), maxYPosition: CGFloat(maxY), explainYPosition: UIScreen.main.bounds.midY - 60, explainText: NSLocalizedString("Press the SAVE button to apply the settings" , comment: "Нажмите кнопку «Сохранить», что бы применить настройки"))
             }
         case 5:
             viewController.dismiss(animated: false, completion: nil)
