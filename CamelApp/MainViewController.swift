@@ -118,7 +118,7 @@ class MainViewController: UITableViewController {
         setupNavigation()
 
         let vc = TutorialManager()
-        vc.changePosition(minYPosition: counterStack.frame.origin.y + 30, maxYPosition: counterCell.frame.height - 20, explainYPosition: counterStack.frame.origin.y + 10, explainText: "Эта штука делает тебя счастливее ахахаха")
+        vc.changePosition(minYPosition: counterStack.frame.origin.y + 30, maxYPosition: counterCell.frame.height - 20, explainYPosition: counterStack.frame.origin.y + 10, explainText: NSLocalizedString("Number of notifications with feedback", comment: "Количество уведомлений, на которые вы отреагировали, открыв приложение" ))
         vc.delegate = self
         vc.modalPresentationStyle = .overCurrentContext
         present(vc, animated: false, completion: nil)

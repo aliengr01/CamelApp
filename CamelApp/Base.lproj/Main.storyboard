@@ -154,20 +154,20 @@
                                                     </constraints>
                                                 </view>
                                                 <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SAQ-3w-rip">
-                                                    <rect key="frame" x="124" y="57" width="127.33333333333331" height="43"/>
+                                                    <rect key="frame" x="124" y="57" width="95.333333333333314" height="43"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWy-hi-KGM">
-                                                            <rect key="frame" x="0.0" y="5" width="32" height="33"/>
+                                                            <rect key="frame" x="0.0" y="10.666666666666664" width="16" height="22"/>
                                                             <state key="normal" image="minusButton"/>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2x-2r-fyg">
-                                                            <rect key="frame" x="52" y="0.0" width="23.333333333333329" height="43"/>
+                                                            <rect key="frame" x="36" y="0.0" width="23.333333333333329" height="43"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFh-9F-hry">
-                                                            <rect key="frame" x="95.333333333333343" y="5" width="32" height="33"/>
+                                                            <rect key="frame" x="79.333333333333343" y="10.666666666666664" width="16" height="22"/>
                                                             <state key="normal" image="plusButton"/>
                                                         </button>
                                                     </subviews>
