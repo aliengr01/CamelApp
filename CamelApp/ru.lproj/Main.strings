@@ -2,7 +2,7 @@
 "CPc-IZ-17o.text" = "Количество часов";
 
 /* Class = "UILabel"; text = "Time of notifications"; ObjectID = "Fke-Rq-C6F"; Note = "Время напоминаний"; */
-"Fke-Rq-C6F.text" = "Время напоминаний";
+"Fke-Rq-C6F.text" = "Получать напоминания";
 
 /* Class = "UILabel"; text = "Number of times we helped you to straighten your back"; ObjectID = "oAf-fd-cxJ"; Note = "Раз(а) мы помогли вам выровнять спину"; */
 "oAf-fd-cxJ.text" = "Раз(а) мы помогли вам выровнять спину";
@@ -14,5 +14,5 @@
 "sCV-Mc-AX3.text" = "С";
 
 /* Class = "UILabel"; text = "Amount of reminders"; ObjectID = "ysw-z1-JbH"; Note = "Кол-во Напоминаний"; */
-"ysw-z1-JbH.text" = "Кол-во напоминаний";
+"ysw-z1-JbH.text" = "Кол-во напоминаний в час";
 

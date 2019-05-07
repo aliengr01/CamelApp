@@ -576,21 +576,21 @@ extension MainViewController: TutorialManagerDelegate {
                 self.tableView.scrollToRow(at: IndexPath(item: 1, section: 0), at: .middle, animated: false)
                 let minY = UIScreen.main.bounds.midY - 25
                 let maxY = (UIScreen.main.bounds.midY - 25) + (self.amountCell.frame.height)
-                viewController.changePosition(minYPosition: minY, maxYPosition: maxY, explainYPosition: UIScreen.main.bounds.midY - 40, explainText: "jfdslkfndfnsdknfgdlknfdkjngfkdjbfg,dmbg nkj gnn gbn gbfk gnfkjgfskgfskjg")
+                viewController.changePosition(minYPosition: minY, maxYPosition: maxY, explainYPosition: UIScreen.main.bounds.midY - 40, explainText: NSLocalizedString("Set the number of reminders per hour", comment: "Установите количество напоминаний в час"))
             }
         case 2:
             UIView.animate(withDuration: 0.5) {
                 self.tableView.scrollToRow(at: IndexPath(item: 2, section: 0), at: .middle, animated: false)
                 let minY = UIScreen.main.bounds.midY - 40
                 let maxY = (UIScreen.main.bounds.midY - 45) + self.notificationsCell.frame.height
-                viewController.changePosition(minYPosition: minY, maxYPosition: maxY, explainYPosition: UIScreen.main.bounds.midY - 60, explainText: "fsjdfhdskjfndsjkg h gf gf gfg kfdgkjfdhgjkfhgjfdjkghfd ")
+                viewController.changePosition(minYPosition: minY, maxYPosition: maxY, explainYPosition: UIScreen.main.bounds.midY - 60, explainText:NSLocalizedString("Select a specific time period to receive notifications, e.g., from 7:00 to 23:00", comment: "Выберите промежуток времени для получения напоминаний, например, с 7:00 до 23.00"))
             }
         case 3:
             UIView.animate(withDuration: 0.5) {
                 self.tableView.scrollToRow(at: IndexPath(item: 3, section: 0), at: .middle, animated: false)
                 let minY = UIScreen.main.bounds.midY - 40
                 let maxY = (UIScreen.main.bounds.midY - 90) + self.themeCell.frame.height
-                viewController.changePosition(minYPosition: minY, maxYPosition: maxY, explainYPosition: UIScreen.main.bounds.midY - 60, explainText: "fsjdfhdskjfndsjkg h gf gf gfg kfdgkjfdhgjkfhgjfdjkghfd ")
+                viewController.changePosition(minYPosition: minY, maxYPosition: maxY, explainYPosition: UIScreen.main.bounds.midY - 60, explainText:NSLocalizedString("Personalise the color of the interface", comment: "Выберите цветовую схему приложение"))
             }
         case 4:
             changedValues()
@@ -598,7 +598,7 @@ extension MainViewController: TutorialManagerDelegate {
                 self.tableView.scrollToRow(at: IndexPath(item: 0, section: 0), at: .bottom, animated: false)
                 let minY = 20
                 let maxY = 60
-                viewController.changePosition(minYPosition: CGFloat(minY), maxYPosition: CGFloat(maxY), explainYPosition: UIScreen.main.bounds.midY - 60, explainText: "fsjdfhdskjfndsjkg h gf gf gfg kfdgkjfdhgjkfhgjfdjkghfd ")
+                viewController.changePosition(minYPosition: CGFloat(minY), maxYPosition: CGFloat(maxY), explainYPosition: UIScreen.main.bounds.midY - 60, explainText:NSLocalizedString("Press the SAVE button to apply the settings" , comment: Нажмите кнопку «Сохранить», что бы применить настройки))
             }
         case 5:
             viewController.dismiss(animated: false, completion: nil)
