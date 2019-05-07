@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17DECA6C385AFD6C6D417BDA /* Pods_CamelApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 906C43DDB9B274B4EFC572B0 /* Pods_CamelApp.framework */; };
 		5EE11DE022638FF700F7ED50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE11DE222638FF700F7ED50 /* Main.storyboard */; };
 		5EE11DE52263AAA700F7ED50 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EE11DE32263AAA700F7ED50 /* Localizable.strings */; };
 		6B0CCDC9221853A200B8072A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0CCDC8221853A200B8072A /* AppDelegate.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		531D5D4DE12EC26E17EFC7D4 /* Pods-CamelApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CamelApp.release.xcconfig"; path = "Target Support Files/Pods-CamelApp/Pods-CamelApp.release.xcconfig"; sourceTree = "<group>"; };
 		5EE11DDE22638EEA00F7ED50 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		5EE11DDF22638EF200F7ED50 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		5EE11DE122638FF700F7ED50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		6B5182922247C9C100F570B1 /* Expand.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Expand.m4a; sourceTree = "<group>"; };
 		6B5182942247CBC700F570B1 /* camel2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = camel2.mp3; sourceTree = "<group>"; };
 		6B79CA52223710BA003AD8FA /* NotificationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationConstants.swift; sourceTree = "<group>"; };
+		906C43DDB9B274B4EFC572B0 /* Pods_CamelApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CamelApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97002DAD10B2043903AC63AD /* Pods-CamelApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CamelApp.debug.xcconfig"; path = "Target Support Files/Pods-CamelApp/Pods-CamelApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +58,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17DECA6C385AFD6C6D417BDA /* Pods_CamelApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66B8DCB808B59694B11D702A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				97002DAD10B2043903AC63AD /* Pods-CamelApp.debug.xcconfig */,
+				531D5D4DE12EC26E17EFC7D4 /* Pods-CamelApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		6B0CCDBC221853A200B8072A = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +82,8 @@
 				6B5182922247C9C100F570B1 /* Expand.m4a */,
 				6B0CCDC7221853A200B8072A /* CamelApp */,
 				6B0CCDC6221853A200B8072A /* Products */,
+				66B8DCB808B59694B11D702A /* Pods */,
+				ED0954D33CDE0251050970E8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +124,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		ED0954D33CDE0251050970E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				906C43DDB9B274B4EFC572B0 /* Pods_CamelApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -114,9 +139,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6B0CCDD7221853A600B8072A /* Build configuration list for PBXNativeTarget "CamelApp" */;
 			buildPhases = (
+				401F761569D3DD9F72D9ADE6 /* [CP] Check Pods Manifest.lock */,
 				6B0CCDC1221853A200B8072A /* Sources */,
 				6B0CCDC2221853A200B8072A /* Frameworks */,
 				6B0CCDC3221853A200B8072A /* Resources */,
+				4BED9D913AA114379F6451F2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -178,6 +205,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		401F761569D3DD9F72D9ADE6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CamelApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4BED9D913AA114379F6451F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CamelApp/Pods-CamelApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CamelApp/Pods-CamelApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6B0CCDC1221853A200B8072A /* Sources */ = {
@@ -351,6 +429,7 @@
 		};
 		6B0CCDD8221853A600B8072A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97002DAD10B2043903AC63AD /* Pods-CamelApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -370,6 +449,7 @@
 		};
 		6B0CCDD9221853A600B8072A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 531D5D4DE12EC26E17EFC7D4 /* Pods-CamelApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

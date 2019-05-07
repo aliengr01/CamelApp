@@ -593,6 +593,14 @@ extension MainViewController: TutorialManagerDelegate {
                 viewController.changePosition(minYPosition: minY, maxYPosition: maxY, explainYPosition: UIScreen.main.bounds.midY - 60, explainText: "fsjdfhdskjfndsjkg h gf gf gfg kfdgkjfdhgjkfhgjfdjkghfd ")
             }
         case 4:
+            changedValues()
+            UIView.animate(withDuration: 0.5) {
+                self.tableView.scrollToRow(at: IndexPath(item: 0, section: 0), at: .bottom, animated: false)
+                let minY = 20
+                let maxY = 60
+                viewController.changePosition(minYPosition: CGFloat(minY), maxYPosition: CGFloat(maxY), explainYPosition: UIScreen.main.bounds.midY - 60, explainText: "fsjdfhdskjfndsjkg h gf gf gfg kfdgkjfdhgjkfhgjfdjkghfd ")
+            }
+        case 5:
             viewController.dismiss(animated: false, completion: nil)
         default:
             break
