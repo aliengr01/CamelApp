@@ -20,8 +20,9 @@ class TutorialManager: UIViewController {
     private let topView = UIView()
     private let bottomView = UIView()
     
-    private let attr: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17, weight: .medium),
+    private let attr: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17, weight: .bold),
                                                        NSAttributedString.Key.foregroundColor: Globals.Colors.orangeColor]
+    //UIFont.systemFont(ofSize: 17, weight: .bold), | размер и шрифт текста туториал 
     
     weak var delegate: TutorialManagerDelegate?
     
