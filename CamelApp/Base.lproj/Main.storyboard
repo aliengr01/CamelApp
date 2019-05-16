@@ -81,14 +81,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="103"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="riG-Ga-qb4">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="riG-Ga-qb4">
                                                     <rect key="frame" x="16" y="34" width="343" height="4"/>
                                                     <color key="backgroundColor" red="0.99215686274509807" green="0.58039215690000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="4" id="xay-rB-vzA"/>
                                                     </constraints>
                                                 </view>
-                                                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JNA-AR-sjz">
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JNA-AR-sjz">
                                                     <rect key="frame" x="124" y="47" width="127.33333333333331" height="43"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZe-12-faC">
@@ -107,8 +107,8 @@
                                                         </button>
                                                     </subviews>
                                                 </stackView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Amount of reminders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysw-z1-JbH">
-                                                    <rect key="frame" x="16" y="2" width="199" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Number of reminders per hour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysw-z1-JbH">
+                                                    <rect key="frame" x="16" y="2" width="298" height="24"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -121,8 +121,8 @@
                                                 <constraint firstItem="ysw-z1-JbH" firstAttribute="leading" secondItem="Oua-K0-VC6" secondAttribute="leadingMargin" id="8hA-6D-nR0"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ysw-z1-JbH" secondAttribute="trailing" constant="20" symbolic="YES" id="NUM-Zz-FdE"/>
                                                 <constraint firstItem="riG-Ga-qb4" firstAttribute="leading" secondItem="Oua-K0-VC6" secondAttribute="leadingMargin" id="a7H-VF-VmB"/>
-                                                <constraint firstItem="riG-Ga-qb4" firstAttribute="top" secondItem="ysw-z1-JbH" secondAttribute="bottom" constant="2" id="euq-Px-V4W"/>
-                                                <constraint firstItem="ysw-z1-JbH" firstAttribute="top" secondItem="Oua-K0-VC6" secondAttribute="topMargin" id="glS-N4-Phd"/>
+                                                <constraint firstItem="riG-Ga-qb4" firstAttribute="top" secondItem="ysw-z1-JbH" secondAttribute="bottom" constant="8" id="euq-Px-V4W"/>
+                                                <constraint firstItem="ysw-z1-JbH" firstAttribute="top" secondItem="Oua-K0-VC6" secondAttribute="topMargin" constant="-9" id="glS-N4-Phd"/>
                                                 <constraint firstItem="riG-Ga-qb4" firstAttribute="trailing" secondItem="Oua-K0-VC6" secondAttribute="trailingMargin" id="iB8-Eh-kJG"/>
                                                 <constraint firstItem="JNA-AR-sjz" firstAttribute="centerX" secondItem="Oua-K0-VC6" secondAttribute="centerX" id="k5s-7c-Qro"/>
                                                 <constraint firstItem="JNA-AR-sjz" firstAttribute="top" secondItem="riG-Ga-qb4" secondAttribute="bottom" constant="9" id="wjo-nF-NoI"/>
@@ -179,7 +179,7 @@
                                                         </button>
                                                     </subviews>
                                                 </stackView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Time of notifications" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fke-Rq-C6F">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Receive reminders" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fke-Rq-C6F">
                                                     <rect key="frame" x="16" y="27" width="192.66666666666666" height="24"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <nil key="textColor"/>

@@ -580,16 +580,20 @@ extension MainViewController: TutorialManagerDelegate {
         case 1:
             UIView.animate(withDuration: 0.5) {
                 self.tableView.scrollToRow(at: IndexPath(item: 1, section: 0), at: .middle, animated: false)
-                let minY = UIScreen.main.bounds.midY - 25
-                let maxY = (UIScreen.main.bounds.midY - 25) + (self.amountCell.frame.height)
-                viewController.changePosition(minYPosition: minY, maxYPosition: maxY, explainYPosition: UIScreen.main.bounds.midY - 40, explainText: "jfdslkfndfnsdknfgdlknfdkjngfkdjbfg,dmbg nkj gnn gbn gbfk gnfkjgfskgfskjg")
+                let minY = UIScreen.main.bounds.midY - 50
+                let maxY = (UIScreen.main.bounds.midY - 15) + (self.amountCell.frame.height)
+                viewController.changePosition(minYPosition: minY, maxYPosition: maxY, explainYPosition: UIScreen.main.bounds.midY - 60, explainText: NSLocalizedString("Set the number of reminders per hour", comment: "Установите количество напоминаний в час"))
+                //let minY = UIScreen.main.bounds.midY - 50 |ВЕРХНЯЯ ЛИНЯЯ РАМКИ +ВВЕРИХ -ВНИЗ
+                //let maxY = (UIScreen.main.bounds.midY - 15) |НИЖНЯЯ ЛИНЯЯ РАМКИ +ВВЕРХ -ВНИЗ
+                //explainYPosition: UIScreen.main.bounds.midY |60, - (ТЕКСТ +ВВЕРХ - ВНИЗ
+
             }
         case 2:
             UIView.animate(withDuration: 0.5) {
                 self.tableView.scrollToRow(at: IndexPath(item: 2, section: 0), at: .middle, animated: false)
-                let minY = UIScreen.main.bounds.midY - 40
+                let minY = UIScreen.main.bounds.midY - 60
                 let maxY = (UIScreen.main.bounds.midY - 45) + self.notificationsCell.frame.height
-                viewController.changePosition(minYPosition: minY, maxYPosition: maxY, explainYPosition: UIScreen.main.bounds.midY - 60, explainText: "fsjdfhdskjfndsjkg h gf gf gfg kfdgkjfdhgjkfhgjfdjkghfd ")
+                viewController.changePosition(minYPosition: minY, maxYPosition: maxY, explainYPosition: UIScreen.main.bounds.midY - 70, explainText:NSLocalizedString("Select a specific time period to receive notifications, e.g., from 7:00 to 23:00", comment: "Выберите промежуток времени для получения напоминаний, например, с 7:00 до 23.00"))
             }
 //        case 3:
 //            UIView.animate(withDuration: 0.5) {
@@ -599,12 +603,19 @@ extension MainViewController: TutorialManagerDelegate {
 //                viewController.changePosition(minYPosition: minY, maxYPosition: maxY, explainYPosition: UIScreen.main.bounds.midY - 60, explainText: "fsjdfhdskjfndsjkg h gf gf gfg kfdgkjfdhgjkfhgjfdjkghfd ")
 //            }
         case 3:
+            UIView.animate(withDuration: 0.5) {
+                self.tableView.scrollToRow(at: IndexPath(item: 3, section: 0), at: .middle, animated: false)
+                let minY = self.themeCell.frame.origin.y - self.themeCell.frame.height/2
+                let maxY = self.themeCell.frame.origin.y + self.themeCell.frame.height/2
+                viewController.changePosition(minYPosition: minY, maxYPosition: maxY, explainYPosition: UIScreen.main.bounds.midY + 25, explainText:NSLocalizedString("Personalise the color of the interface", comment: "Выберите цветовую схему приложение"))
+            }
+        case 4:
             changedValues()
             UIView.animate(withDuration: 0.5) {
                 self.tableView.scrollToRow(at: IndexPath(item: 0, section: 0), at: .bottom, animated: false)
                 let minY = UIApplication.shared.statusBarFrame.height
                 let maxY = (self.navigationController?.navigationBar.frame.height ?? 0) + minY
-                viewController.changePosition(minYPosition: CGFloat(minY), maxYPosition: CGFloat(maxY), explainYPosition: UIScreen.main.bounds.midY - 60, explainText: "fsjdfhdskjfndsjkg h gf gf gfg kfdgkjfdhgjkfhgjfdjkghfd ")
+                viewController.changePosition(minYPosition: CGFloat(minY), maxYPosition: CGFloat(maxY), explainYPosition: UIScreen.main.bounds.midY - 265, explainText: NSLocalizedString("Press the SAVE button to apply the settings" , comment: "Нажмите кнопку «Сохранить», что бы применить настройки"))
             }
         case 5:
             viewController.dismiss(animated: false, completion: nil)

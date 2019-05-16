@@ -1,8 +1,8 @@
 /* Class = "UILabel"; text = "Number of hours"; ObjectID = "CPc-IZ-17o"; Note = "В период времени"; */
 "CPc-IZ-17o.text" = "В період часу";
 
-/* Class = "UILabel"; text = "Time of notifications"; ObjectID = "Fke-Rq-C6F"; Note = "Время напоминаний"; */
-"Fke-Rq-C6F.text" = "Час нагадувань";
+/* Class = "UILabel"; text = "Receive reminders"; ObjectID = "Fke-Rq-C6F"; Note = "Время напоминаний"; */
+"Fke-Rq-C6F.text" = "Отримувати нагадування";
 
 /* Class = "UILabel"; text = "Number of times we helped you to straighten your back"; ObjectID = "oAf-fd-cxJ"; Note = "Раз(а) мы помогли вам выровнять спину"; */
 "oAf-fd-cxJ.text" = "Раз(ів) ми допомогли вам вирівняти спину";
@@ -13,6 +13,6 @@
 /* Class = "UILabel"; text = "From"; ObjectID = "sCV-Mc-AX3"; Note = "C"; */
 "sCV-Mc-AX3.text" = "З";
 
-/* Class = "UILabel"; text = "Amount of reminders"; ObjectID = "ysw-z1-JbH"; Note = "Кол-во Напоминаний"; */
-"ysw-z1-JbH.text" = "К-сть нагадувань";
+/* Class = "UILabel"; text = "Number of reminders per hour"; ObjectID = "ysw-z1-JbH"; Note = "Кол-во Напоминаний"; */
+"ysw-z1-JbH.text" = "К-сть нагадувань в годину";
 
