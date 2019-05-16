@@ -117,11 +117,17 @@ class MainViewController: UITableViewController {
         
         setupNavigation()
 
+        //MARK: - Tutorial
         let vc = TutorialManager()
-        vc.changePosition(minYPosition: counterStack.frame.origin.y + 30, maxYPosition: counterCell.frame.height - 20, explainYPosition: counterStack.frame.origin.y + 10, explainText: "Эта штука делает тебя счастливее ахахаха")
+        vc.changePosition(minYPosition: counterStack.frame.origin.y + 30, maxYPosition: counterCell.frame.height , explainYPosition: counterStack.frame.origin.y + 10, explainText: "Эта штука делает тебя счастливее ахахаха")
         vc.delegate = self
         vc.modalPresentationStyle = .overCurrentContext
         present(vc, animated: false, completion: nil)
+        
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        if let vc = storyboard.instantiateViewController(withIdentifier: "SubscriptionsTableViewController") as? SubscriptionsTableViewController {
+//            present(vc, animated: true, completion: nil)
+//        }
  
     }
 
@@ -585,14 +591,14 @@ extension MainViewController: TutorialManagerDelegate {
                 let maxY = (UIScreen.main.bounds.midY - 45) + self.notificationsCell.frame.height
                 viewController.changePosition(minYPosition: minY, maxYPosition: maxY, explainYPosition: UIScreen.main.bounds.midY - 60, explainText: "fsjdfhdskjfndsjkg h gf gf gfg kfdgkjfdhgjkfhgjfdjkghfd ")
             }
+//        case 3:
+//            UIView.animate(withDuration: 0.5) {
+//                self.tableView.scrollToRow(at: IndexPath(item: 3, section: 0), at: .middle, animated: false)
+//                let minY = self.themeCell.frame.origin.y - self.themeCell.frame.height/2
+//                let maxY = self.themeCell.frame.origin.y + self.themeCell.frame.height/2
+//                viewController.changePosition(minYPosition: minY, maxYPosition: maxY, explainYPosition: UIScreen.main.bounds.midY - 60, explainText: "fsjdfhdskjfndsjkg h gf gf gfg kfdgkjfdhgjkfhgjfdjkghfd ")
+//            }
         case 3:
-            UIView.animate(withDuration: 0.5) {
-                self.tableView.scrollToRow(at: IndexPath(item: 3, section: 0), at: .middle, animated: false)
-                let minY = self.themeCell.frame.origin.y - self.themeCell.frame.height/2
-                let maxY = self.themeCell.frame.origin.y + self.themeCell.frame.height/2
-                viewController.changePosition(minYPosition: minY, maxYPosition: maxY, explainYPosition: UIScreen.main.bounds.midY - 60, explainText: "fsjdfhdskjfndsjkg h gf gf gfg kfdgkjfdhgjkfhgjfdjkghfd ")
-            }
-        case 4:
             changedValues()
             UIView.animate(withDuration: 0.5) {
                 self.tableView.scrollToRow(at: IndexPath(item: 0, section: 0), at: .bottom, animated: false)

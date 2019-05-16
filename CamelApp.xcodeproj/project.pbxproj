@@ -18,6 +18,10 @@
 		6B0CCDDD221991E000B8072A /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0CCDDC221991E000B8072A /* UserDefaultsExtension.swift */; };
 		6B0CCDDF221A115F00B8072A /* UIToolBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0CCDDE221A115E00B8072A /* UIToolBarExtension.swift */; };
 		6B1E47FF22723CBF005C652C /* TutorialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1E47FE22723CBF005C652C /* TutorialManager.swift */; };
+		6B2E5CD922843C8B000619DC /* SubscriptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2E5CD722843C8B000619DC /* SubscriptionsTableViewController.swift */; };
+		6B2E5CDC2284462D000619DC /* SubscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2E5CDB2284462D000619DC /* SubscriptionService.swift */; };
+		6B2E5CDE228447E5000619DC /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2E5CDD228447E5000619DC /* Subscription.swift */; };
+		6B2E5CE022844C09000619DC /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B2E5CDF22844C09000619DC /* StoreKit.framework */; };
 		6B46AF5E2220B1D100A1B37D /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B46AF5D2220B1D100A1B37D /* NotificationManager.swift */; };
 		6B4ED1E2226F86D70075B91C /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4ED1E1226F86D70075B91C /* UIDeviceExtension.swift */; };
 		6B5182932247C9C100F570B1 /* Expand.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 6B5182922247C9C100F570B1 /* Expand.m4a */; };
@@ -44,6 +48,10 @@
 		6B0CCDDC221991E000B8072A /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 		6B0CCDDE221A115E00B8072A /* UIToolBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIToolBarExtension.swift; sourceTree = "<group>"; };
 		6B1E47FE22723CBF005C652C /* TutorialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialManager.swift; sourceTree = "<group>"; };
+		6B2E5CD722843C8B000619DC /* SubscriptionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsTableViewController.swift; sourceTree = "<group>"; };
+		6B2E5CDB2284462D000619DC /* SubscriptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionService.swift; sourceTree = "<group>"; };
+		6B2E5CDD228447E5000619DC /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		6B2E5CDF22844C09000619DC /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		6B46AF5D2220B1D100A1B37D /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		6B4ED1E1226F86D70075B91C /* UIDeviceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
 		6B5182922247C9C100F570B1 /* Expand.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Expand.m4a; sourceTree = "<group>"; };
@@ -59,6 +67,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17DECA6C385AFD6C6D417BDA /* Pods_CamelApp.framework in Frameworks */,
+				6B2E5CE022844C09000619DC /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,7 +80,6 @@
 				97002DAD10B2043903AC63AD /* Pods-CamelApp.debug.xcconfig */,
 				531D5D4DE12EC26E17EFC7D4 /* Pods-CamelApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -105,6 +113,9 @@
 				6B46AF5D2220B1D100A1B37D /* NotificationManager.swift */,
 				6B79CA52223710BA003AD8FA /* NotificationConstants.swift */,
 				6B1E47FE22723CBF005C652C /* TutorialManager.swift */,
+				6B2E5CD722843C8B000619DC /* SubscriptionsTableViewController.swift */,
+				6B2E5CDB2284462D000619DC /* SubscriptionService.swift */,
+				6B2E5CDD228447E5000619DC /* Subscription.swift */,
 				5EE11DE222638FF700F7ED50 /* Main.storyboard */,
 				6B0CCDCF221853A600B8072A /* Assets.xcassets */,
 				6B0CCDD1221853A600B8072A /* LaunchScreen.storyboard */,
@@ -127,6 +138,7 @@
 		ED0954D33CDE0251050970E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6B2E5CDF22844C09000619DC /* StoreKit.framework */,
 				906C43DDB9B274B4EFC572B0 /* Pods_CamelApp.framework */,
 			);
 			name = Frameworks;
@@ -167,6 +179,11 @@
 					6B0CCDC4221853A200B8072A = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1020;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -265,9 +282,12 @@
 				6B46AF5E2220B1D100A1B37D /* NotificationManager.swift in Sources */,
 				6B0CCDCB221853A200B8072A /* MainViewController.swift in Sources */,
 				6B0CCDC9221853A200B8072A /* AppDelegate.swift in Sources */,
+				6B2E5CDC2284462D000619DC /* SubscriptionService.swift in Sources */,
 				6B79CA53223710BA003AD8FA /* NotificationConstants.swift in Sources */,
 				6B1E47FF22723CBF005C652C /* TutorialManager.swift in Sources */,
+				6B2E5CDE228447E5000619DC /* Subscription.swift in Sources */,
 				6B0CCDDD221991E000B8072A /* UserDefaultsExtension.swift in Sources */,
+				6B2E5CD922843C8B000619DC /* SubscriptionsTableViewController.swift in Sources */,
 				6B4ED1E2226F86D70075B91C /* UIDeviceExtension.swift in Sources */,
 				6B0CCDDF221A115F00B8072A /* UIToolBarExtension.swift in Sources */,
 				6B0CCDDB2219901100B8072A /* Globals.swift in Sources */,
