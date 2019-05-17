@@ -22,7 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //// Reset badges
         UIApplication.shared.applicationIconBadgeNumber = 0
         SKPaymentQueue.default().add(self)
-        SubscriptionServie.shared.loadSubscriptionOptions()
+        SubscriptionService.shared.loadSubscriptionOptions()
+        SubscriptionService.shared.restorePurchases()
         
         return true
     }

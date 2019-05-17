@@ -98,7 +98,9 @@ class MainViewController: UITableViewController {
         if !defaults.bool(forKey: "first") {
             defaults.set(6, forKey: Globals.NotificationsKey.remindNotif)
             defaults.set(1, forKey: Globals.NotificationsKey.periodNotif)
-            defaults.set(true, forKey: "first")
+            showTutorial()
+        } else {
+           //checkSubscriptions()
         }
         
         addTargets() //Set targets to edit theme buttons
@@ -116,19 +118,8 @@ class MainViewController: UITableViewController {
         }
         
         setupNavigation()
-
-        //MARK: - Tutorial
-        let vc = TutorialManager()
-        vc.changePosition(minYPosition: counterStack.frame.origin.y + 30, maxYPosition: counterCell.frame.height , explainYPosition: counterStack.frame.origin.y + 10, explainText: "Эта штука делает тебя счастливее ахахаха")
-        vc.delegate = self
-        vc.modalPresentationStyle = .overCurrentContext
-        present(vc, animated: false, completion: nil)
         
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        if let vc = storyboard.instantiateViewController(withIdentifier: "SubscriptionsTableViewController") as? SubscriptionsTableViewController {
-//            present(vc, animated: true, completion: nil)
-//        }
- 
+        NotificationCenter.default.addObserver(self, selector: #selector(showSubscriptions), name: SubscriptionService.showSubscriptionController, object: nil)
     }
 
     
@@ -147,6 +138,29 @@ class MainViewController: UITableViewController {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         countNotificationsLabel.text = String(defaults.integer(forKey: Globals.NotificationsKey.notifCount))
+    }
+    
+    private func checkSubscriptions() {
+        SubscriptionService.shared.restorePurchases()
+    }
+    
+    @objc private func showSubscriptions() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let vc = storyboard.instantiateViewController(withIdentifier: "SubscriptionsTableViewController") as? SubscriptionsTableViewController {
+            self.present(vc, animated: true) {
+            }
+        }
+    }
+    
+    
+    //MARK: - Tutorial
+    private func showTutorial() {
+        let vc = TutorialManager()
+        vc.changePosition(minYPosition: counterStack.frame.origin.y + 30, maxYPosition: counterCell.frame.height , explainYPosition: counterStack.frame.origin.y + 10, explainText:NSLocalizedString("Number of notifications with feedback", comment: "Количество уведомлений, на которые вы отреагировали, открыв приложение"))
+        vc.delegate = self
+        vc.modalPresentationStyle = .overCurrentContext
+        present(vc, animated: false, completion: nil)
+        defaults.set(true, forKey: "first")
     }
     
     func setupNavigation(_ show: Bool = false) {
@@ -602,23 +616,25 @@ extension MainViewController: TutorialManagerDelegate {
 //                let maxY = self.themeCell.frame.origin.y + self.themeCell.frame.height/2
 //                viewController.changePosition(minYPosition: minY, maxYPosition: maxY, explainYPosition: UIScreen.main.bounds.midY - 60, explainText: "fsjdfhdskjfndsjkg h gf gf gfg kfdgkjfdhgjkfhgjfdjkghfd ")
 //            }
+//        case 3:
+//            UIView.animate(withDuration: 0.5) {
+//                self.tableView.scrollToRow(at: IndexPath(item: 3, section: 0), at: .middle, animated: false)
+//                let minY = self.themeCell.frame.origin.y - self.themeCell.frame.height/2
+//                let maxY = self.themeCell.frame.origin.y + self.themeCell.frame.height/2
+//                viewController.changePosition(minYPosition: minY, maxYPosition: maxY, explainYPosition: UIScreen.main.bounds.midY + 25, explainText:NSLocalizedString("Personalise the color of the interface", comment: "Выберите цветовую схему приложение"))
+//            }
         case 3:
-            UIView.animate(withDuration: 0.5) {
-                self.tableView.scrollToRow(at: IndexPath(item: 3, section: 0), at: .middle, animated: false)
-                let minY = self.themeCell.frame.origin.y - self.themeCell.frame.height/2
-                let maxY = self.themeCell.frame.origin.y + self.themeCell.frame.height/2
-                viewController.changePosition(minYPosition: minY, maxYPosition: maxY, explainYPosition: UIScreen.main.bounds.midY + 25, explainText:NSLocalizedString("Personalise the color of the interface", comment: "Выберите цветовую схему приложение"))
-            }
-        case 4:
             changedValues()
             UIView.animate(withDuration: 0.5) {
                 self.tableView.scrollToRow(at: IndexPath(item: 0, section: 0), at: .bottom, animated: false)
                 let minY = UIApplication.shared.statusBarFrame.height
                 let maxY = (self.navigationController?.navigationBar.frame.height ?? 0) + minY
-                viewController.changePosition(minYPosition: CGFloat(minY), maxYPosition: CGFloat(maxY), explainYPosition: UIScreen.main.bounds.midY - 265, explainText: NSLocalizedString("Press the SAVE button to apply the settings" , comment: "Нажмите кнопку «Сохранить», что бы применить настройки"))
+                viewController.changePosition(minYPosition: CGFloat(minY), maxYPosition: CGFloat(maxY), explainYPosition: maxY + 65, explainText: NSLocalizedString("Press the SAVE button to apply the settings" , comment: "Нажмите кнопку «Сохранить», что бы применить настройки"))
             }
         case 5:
-            viewController.dismiss(animated: false, completion: nil)
+            viewController.dismiss(animated: false) { [weak self] in
+                self?.showSubscriptions()
+            }
         default:
             break
         }

@@ -9,32 +9,34 @@
 import Foundation
 import StoreKit
 
-class SubscriptionServie: NSObject {
-    static let shared = SubscriptionServie()
+class SubscriptionService: NSObject {
+    static let dissmissNotification = Notification.Name("SubscriptionServiceSessionDissmissNotification")
+    static let optionsLoadedNotification = Notification.Name("SubscriptionServiceOptionsLoadedNotification")
+    static let showSubscriptionController = Notification.Name("ShowSubscriptionControllerNotification")
+
+    
+    static let shared = SubscriptionService()
+    
+    var show: Bool = true
     
     var options: [Subscription]? {
         didSet {
-           // NotificationCenter.default.post(name: SubscriptionService.optionsLoadedNotification, object: options)
+            NotificationCenter.default.post(name: SubscriptionService.optionsLoadedNotification, object: options)
         }
     }
     
     func loadSubscriptionOptions() {
-        //SKPaymentQueue.default().add(self)
-        let productIDPrefix = Bundle.main.bundleIdentifier! + "."
-        
         let oneMonth = "camel_purchase_month"
         let threeMonth  =  "purchase_camel_3month"
         let allAccessMonthly = "purchase_camel_forever"
-        
         let productIDs = Set([oneMonth, threeMonth, allAccessMonthly])
-        
         let request = SKProductsRequest(productIdentifiers: productIDs)
         request.delegate = self
         request.start()
     }
 }
 
-extension SubscriptionServie: SKProductsRequestDelegate {
+extension SubscriptionService: SKProductsRequestDelegate, SKPaymentTransactionObserver {
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
         options = response.products.map { Subscription(product: $0) }
     }
@@ -44,37 +46,47 @@ extension SubscriptionServie: SKProductsRequestDelegate {
             print("Subscription Options Failed Loading: \(error.localizedDescription)")
         }
     }
+    
+    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+        for transaction:AnyObject in transactions {
+            if let trans = transaction as? SKPaymentTransaction {
+                switch trans.transactionState {
+                case .purchased:
+                    print("purchased")
+                    NotificationCenter.default.post(name: SubscriptionService.dissmissNotification, object: nil)
+                case .failed:
+                    print("failed")
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
+                        if self.show {
+                            NotificationCenter.default.post(name: SubscriptionService.showSubscriptionController, object: nil)
+                        }
+                    }
+                    
+                case .restored:
+                    print("restored")
+                    show = false
+                    NotificationCenter.default.post(name: SubscriptionService.dissmissNotification, object: nil)
+                default: break
+                }
+            }
+        }
+    }
+    
 }
 
-extension SubscriptionServie {
-//    func uploadReceipt(completion: ((_ success: Bool) -> Void)? = nil) {
-//        if let receiptData = loadReceipt() {
-//            SelfieService.shared.upload(receipt: receiptData) { [weak self] (result) in
-//                guard let strongSelf = self else { return }
-//                switch result {
-//                case .success(let result):
-//                    strongSelf.currentSessionId = result.sessionId
-//                    strongSelf.currentSubscription = result.currentSubscription
-//                    completion?(true)
-//                case .failure(let error):
-//                    print("🚫 Receipt Upload Failed: \(error)")
-//                    completion?(false)
-//                }
-//            }
-//        }
-//    }
+extension SubscriptionService {
+    func canMakePurchases() -> Bool {
+        return SKPaymentQueue.canMakePayments()
+    }
     
-    private func loadReceipt() -> Data? {
-        guard let url = Bundle.main.appStoreReceiptURL else {
-            return nil
-        }
-        
-        do {
-            let data = try Data(contentsOf: url)
-            return data
-        } catch {
-            print("Error loading receipt data: \(error.localizedDescription)")
-            return nil
-        }
+    func purchase(subscription: Subscription) {
+        let payment = SKPayment(product: subscription.product)
+        SKPaymentQueue.default().add(payment)
+    }
+    
+
+    func restorePurchases(){
+        SKPaymentQueue.default().add(self)
+        SKPaymentQueue.default().restoreCompletedTransactions()
     }
 }

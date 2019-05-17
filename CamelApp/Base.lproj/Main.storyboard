@@ -257,7 +257,7 @@
                                         <rect key="frame" x="0.0" y="843" width="375" height="103"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ipt-ig-yNQ" id="FEK-E6-Qdr">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="103"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="102.66666666666667"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Number of hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPc-IZ-17o">
@@ -457,17 +457,11 @@
                                                             <rect key="frame" x="0.0" y="132.66666666666666" width="303" height="60"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qRR-dM-XTG">
-                                                                    <rect key="frame" x="67.000000000000014" y="10" width="169.33333333333337" height="40"/>
+                                                                    <rect key="frame" x="102" y="10" width="99.333333333333314" height="40"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start FREE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tpv-3O-7Lo">
-                                                                            <rect key="frame" x="34.999999999999993" y="0.0" width="99.333333333333314" height="20"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="99.333333333333329" height="40"/>
                                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7 days FREE after $2,99 / month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTf-w1-K7A">
-                                                                            <rect key="frame" x="0.0" y="20" width="169.33333333333334" height="20"/>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
@@ -488,6 +482,9 @@
                                                             <state key="normal" title="Reastore purchases">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="restoreAction:" destination="LFR-rs-913" eventType="touchUpInside" id="Nqh-L7-OSb"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -525,6 +522,9 @@
                                                     <state key="normal" title="Privacy Policy">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="privacyAction:" destination="LFR-rs-913" eventType="touchUpInside" id="DO4-r2-zNw"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -546,9 +546,13 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="allBigLabel" destination="Tpv-3O-7Lo" id="kF9-KM-hxP"/>
                         <outlet property="allView" destination="M5z-8N-Lgw" id="i5L-ms-U17"/>
+                        <outlet property="freeLabel" destination="MXc-YG-DUH" id="55c-DR-cGm"/>
                         <outlet property="oneMonthView" destination="l6K-XM-Gxo" id="9pe-fh-U5h"/>
+                        <outlet property="threeMonthBigLabel" destination="Kza-yX-71A" id="Erg-re-aVs"/>
                         <outlet property="threeMonthView" destination="bxg-wM-NmE" id="IH0-sY-9TR"/>
+                        <outlet property="threemonthLabel" destination="Rgq-jZ-yT0" id="gMF-6D-OqC"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p5t-10-JXs" userLabel="First Responder" sceneMemberID="firstResponder"/>
