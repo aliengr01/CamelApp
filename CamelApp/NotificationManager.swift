@@ -75,6 +75,7 @@ class NotificationManager {
                 }
             }
         }
+        removeNotification()
     }
     
     ////Generate ID for notification
@@ -87,5 +88,10 @@ class NotificationManager {
     func removeAllNotifications() {
         notificationCenter.removeAllDeliveredNotifications()
         notificationCenter.removeAllPendingNotificationRequests()
+    }
+    
+    func removeNotification(with identifire: String = "indentifier0") {
+        notificationCenter.removeDeliveredNotifications(withIdentifiers: [identifire])
+        notificationCenter.removePendingNotificationRequests(withIdentifiers: [identifire])
     }
 }
