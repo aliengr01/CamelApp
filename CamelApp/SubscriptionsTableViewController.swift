@@ -99,7 +99,7 @@ private extension SubscriptionsTableViewController {
     
     func setupButtons() {
         threeMonthBigLabel.text = "\(options?[1].formattedPrice ?? "") / 3 Month"
-        threemonthLabel.text = "then $1,66 / month"
+        threemonthLabel.text = "3 months at $1,66/mo."
         allBigLabel.text = "\(options?[2].formattedPrice ?? "") / One-time payment"
     }
 }

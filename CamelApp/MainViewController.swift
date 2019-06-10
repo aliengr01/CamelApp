@@ -100,7 +100,7 @@ class MainViewController: UITableViewController {
             defaults.set(1, forKey: Globals.NotificationsKey.periodNotif)
             showTutorial()
         } else {
-           //checkSubscriptions()
+           checkSubscriptions()
         }
         
         addTargets() //Set targets to edit theme buttons
