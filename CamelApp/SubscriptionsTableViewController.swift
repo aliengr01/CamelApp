@@ -45,7 +45,7 @@ class SubscriptionsTableViewController: UITableViewController {
     }
     
     @IBAction func privacyAction(_ sender: UIButton) {
-        if let url = URL(string: "https://www.facebook.com/baytov.oleg") {
+        if let url = URL(string: "https://www.freeprivacypolicy.com/privacy/view/86baa6f86203b73fecdb9a180c51070c") {
             UIApplication.shared.open(url)
         }
     }
@@ -99,7 +99,9 @@ private extension SubscriptionsTableViewController {
     
     func setupButtons() {
         threeMonthBigLabel.text = "\(options?[1].formattedPrice ?? "") / 3 Month"
-        threemonthLabel.text = "3 months at $1,66/mo."
+        let price = (options?[1].product.price.doubleValue ?? 4.99) / 3
+        let cutPrice = Double(round(100*price)/100)
+        threemonthLabel.text = "at \(cutPrice)/mo."
         allBigLabel.text = "\(options?[2].formattedPrice ?? "") / One-time payment"
     }
 }

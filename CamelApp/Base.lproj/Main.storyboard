@@ -511,7 +511,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="128" id="xW8-VT-yu6"/>
                                                     </constraints>
-                                                    <string key="text">Payment will be charged to your Apple ID account at the confirmation of purchase. The subscription automatically renews unless it is canceled at least 24 hours before the end of the current period. Your account will be charged for renewal within 24 hours prior to the end of the current period. You can manage and cancel your subscriptions by going to your App Store account settings after purchase
+                                                    <string key="text">After 7 days free trial this subscription automatically renews for 2.99$ per month unless it is canceled at least 24 hours before the end of the trial period. Payment will be charged to your Apple ID account at the confirmation of purchase. The subscription automatically renews unless it is canceled at least 24 hours before the end of the current period. Your account will be charged for renewal within 24 hours prior to the end of the current period. You can manage and cancel your subscriptions by going to your App Store account settings after purchase
 </string>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
