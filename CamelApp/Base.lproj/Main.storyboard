@@ -526,12 +526,23 @@
                                                         <action selector="privacyAction:" destination="LFR-rs-913" eventType="touchUpInside" id="DO4-r2-zNw"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32n-OW-pdM">
+                                                    <rect key="frame" x="143" y="197" width="89" height="30"/>
+                                                    <state key="normal" title="Terms of use">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="termsAction:" destination="LFR-rs-913" eventType="touchUpInside" id="gKJ-Rb-m2f"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="snq-s5-Fnd" firstAttribute="leading" secondItem="EOf-Pm-04S" secondAttribute="leadingMargin" constant="20" id="1jT-bx-H9W"/>
+                                                <constraint firstItem="32n-OW-pdM" firstAttribute="centerX" secondItem="EOf-Pm-04S" secondAttribute="centerX" id="6qR-Rz-Q1s"/>
                                                 <constraint firstItem="dAj-3P-Mo4" firstAttribute="centerX" secondItem="EOf-Pm-04S" secondAttribute="centerX" id="9tB-Fp-GVD"/>
                                                 <constraint firstItem="snq-s5-Fnd" firstAttribute="top" secondItem="EOf-Pm-04S" secondAttribute="topMargin" id="YIi-Am-MNH"/>
                                                 <constraint firstItem="dAj-3P-Mo4" firstAttribute="top" secondItem="snq-s5-Fnd" secondAttribute="bottom" constant="20" id="ZDs-7J-e8M"/>
+                                                <constraint firstItem="32n-OW-pdM" firstAttribute="top" secondItem="dAj-3P-Mo4" secondAttribute="bottom" constant="8" id="gT5-SU-0zV"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="snq-s5-Fnd" secondAttribute="trailing" constant="20" id="wFb-QR-2k2"/>
                                             </constraints>
                                         </tableViewCellContentView>

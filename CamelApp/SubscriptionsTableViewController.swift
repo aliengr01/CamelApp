@@ -49,6 +49,11 @@ class SubscriptionsTableViewController: UITableViewController {
             UIApplication.shared.open(url)
         }
     }
+    @IBAction func termsAction(_ sender: Any) {
+        if let url = URL(string: "https://policies.google.com/terms") {
+            UIApplication.shared.open(url)
+        }
+    }
     
     @IBAction func restoreAction(_ sender: UIButton) {
         SubscriptionService.shared.restorePurchases()
