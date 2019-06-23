@@ -99,9 +99,10 @@ class MainViewController: UITableViewController {
             defaults.set(6, forKey: Globals.NotificationsKey.remindNotif)
             defaults.set(1, forKey: Globals.NotificationsKey.periodNotif)
             showTutorial()
-        } else {
-           checkSubscriptions()
         }
+//        } else {
+//           checkSubscriptions()
+//        }
         
         addTargets() //Set targets to edit theme buttons
         setTheme() //Set theme color for app
@@ -119,7 +120,7 @@ class MainViewController: UITableViewController {
         
         setupNavigation()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(showSubscriptions), name: SubscriptionService.showSubscriptionController, object: nil)
+      //  NotificationCenter.default.addObserver(self, selector: #selector(showSubscriptions), name: SubscriptionService.showSubscriptionController, object: nil)
     }
 
     
@@ -633,7 +634,7 @@ extension MainViewController: TutorialManagerDelegate {
             }
         case 5:
             viewController.dismiss(animated: false) { [weak self] in
-                self?.showSubscriptions()
+                //self?.showSubscriptions()
             }
         default:
             break

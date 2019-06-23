@@ -26,8 +26,8 @@ class SubscriptionService: NSObject {
     }
     
     func loadSubscriptionOptions() {
-        let oneMonth = "camel_purchase_month"
-        let threeMonth  =  "purchase_camel_3month"
+        let oneMonth = "one_month_subscription"
+        let threeMonth  =  "three_month_subscription"
         let allAccessMonthly = "purchase_camel_forever"
         let productIDs = Set([oneMonth, threeMonth, allAccessMonthly])
         let request = SKProductsRequest(productIdentifiers: productIDs)

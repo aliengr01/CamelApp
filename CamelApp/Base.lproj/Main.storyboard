@@ -399,17 +399,11 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="303" height="60"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7hx-Xa-9dM">
-                                                                    <rect key="frame" x="47.333333333333329" y="10" width="208.33333333333337" height="40"/>
+                                                                    <rect key="frame" x="86.000000000000014" y="10" width="131.33333333333337" height="40"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRY 7 DAYS FOR FREE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUJ-g4-pxq">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="208.33333333333334" height="20"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 2.99$/month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUJ-g4-pxq">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="131.33333333333334" height="40"/>
                                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="then 2.99$/month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXc-YG-DUH">
-                                                                            <rect key="frame" x="57.000000000000007" y="20" width="94.666666666666686" height="20"/>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
@@ -428,17 +422,11 @@
                                                             <rect key="frame" x="0.0" y="66.333333333333329" width="303" height="60"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Muo-AP-tqT">
-                                                                    <rect key="frame" x="67.000000000000014" y="10" width="169.33333333333337" height="40"/>
+                                                                    <rect key="frame" x="102" y="10" width="99.333333333333314" height="40"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start FREE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kza-yX-71A">
-                                                                            <rect key="frame" x="34.999999999999993" y="0.0" width="99.333333333333314" height="20"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="99.333333333333329" height="40"/>
                                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7 days FREE after $2,99 / month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rgq-jZ-yT0">
-                                                                            <rect key="frame" x="0.0" y="20" width="169.33333333333334" height="20"/>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
@@ -559,11 +547,9 @@
                     <connections>
                         <outlet property="allBigLabel" destination="Tpv-3O-7Lo" id="kF9-KM-hxP"/>
                         <outlet property="allView" destination="M5z-8N-Lgw" id="i5L-ms-U17"/>
-                        <outlet property="freeLabel" destination="MXc-YG-DUH" id="55c-DR-cGm"/>
                         <outlet property="oneMonthView" destination="l6K-XM-Gxo" id="9pe-fh-U5h"/>
                         <outlet property="threeMonthBigLabel" destination="Kza-yX-71A" id="Erg-re-aVs"/>
                         <outlet property="threeMonthView" destination="bxg-wM-NmE" id="IH0-sY-9TR"/>
-                        <outlet property="threemonthLabel" destination="Rgq-jZ-yT0" id="gMF-6D-OqC"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p5t-10-JXs" userLabel="First Responder" sceneMemberID="firstResponder"/>
