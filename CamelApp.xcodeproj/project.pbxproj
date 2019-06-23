@@ -21,7 +21,6 @@
 		6B2E5CD922843C8B000619DC /* SubscriptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2E5CD722843C8B000619DC /* SubscriptionsTableViewController.swift */; };
 		6B2E5CDC2284462D000619DC /* SubscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2E5CDB2284462D000619DC /* SubscriptionService.swift */; };
 		6B2E5CDE228447E5000619DC /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2E5CDD228447E5000619DC /* Subscription.swift */; };
-		6B2E5CE022844C09000619DC /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B2E5CDF22844C09000619DC /* StoreKit.framework */; };
 		6B46AF5E2220B1D100A1B37D /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B46AF5D2220B1D100A1B37D /* NotificationManager.swift */; };
 		6B4ED1E2226F86D70075B91C /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4ED1E1226F86D70075B91C /* UIDeviceExtension.swift */; };
 		6B5182932247C9C100F570B1 /* Expand.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 6B5182922247C9C100F570B1 /* Expand.m4a */; };
@@ -51,7 +50,6 @@
 		6B2E5CD722843C8B000619DC /* SubscriptionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsTableViewController.swift; sourceTree = "<group>"; };
 		6B2E5CDB2284462D000619DC /* SubscriptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionService.swift; sourceTree = "<group>"; };
 		6B2E5CDD228447E5000619DC /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
-		6B2E5CDF22844C09000619DC /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		6B46AF5D2220B1D100A1B37D /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		6B4ED1E1226F86D70075B91C /* UIDeviceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
 		6B5182922247C9C100F570B1 /* Expand.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Expand.m4a; sourceTree = "<group>"; };
@@ -67,7 +65,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				17DECA6C385AFD6C6D417BDA /* Pods_CamelApp.framework in Frameworks */,
-				6B2E5CE022844C09000619DC /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +135,6 @@
 		ED0954D33CDE0251050970E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6B2E5CDF22844C09000619DC /* StoreKit.framework */,
 				906C43DDB9B274B4EFC572B0 /* Pods_CamelApp.framework */,
 			);
 			name = Frameworks;
@@ -181,7 +177,7 @@
 						LastSwiftMigration = 1020;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
