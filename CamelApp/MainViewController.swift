@@ -323,6 +323,7 @@ class MainViewController: UITableViewController {
         defaults.set(false, forKey: Globals.AppThemeKey.plusMinusThemeKey)
         defaults.set(0, forKey: Globals.AppThemeKey.statusBarColor)
         defaults.setColor(color: Globals.Colors.orangeColor, forKey: Globals.AppThemeKey.saveButtonTheme)
+        setupNavigation(true)
         
         setTheme()
         
@@ -340,6 +341,7 @@ class MainViewController: UITableViewController {
         defaults.set(true, forKey: Globals.AppThemeKey.plusMinusThemeKey)
         defaults.set(1, forKey: Globals.AppThemeKey.statusBarColor)
         defaults.setColor(color: .white, forKey: Globals.AppThemeKey.saveButtonTheme)
+        setupNavigation(true)
         
         setTheme()
         
@@ -357,6 +359,7 @@ class MainViewController: UITableViewController {
         defaults.set(false, forKey: Globals.AppThemeKey.plusMinusThemeKey)
         defaults.set(1, forKey: Globals.AppThemeKey.statusBarColor)
         defaults.setColor(color: Globals.Colors.orangeColor, forKey: Globals.AppThemeKey.saveButtonTheme)
+        setupNavigation(true)
         
         setTheme()
     }
